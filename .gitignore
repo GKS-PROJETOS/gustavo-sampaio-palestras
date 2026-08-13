@@ -1,0 +1,10 @@
+# Windows / OneDrive
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Vercel
+.vercel
+
+# Backup local da v1 — fica só na máquina, não vai para o deploy
+index-v1-backup.html
