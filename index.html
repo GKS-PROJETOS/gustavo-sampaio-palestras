@@ -30,7 +30,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 /* ============================================================
@@ -55,7 +55,6 @@
 
   --display:'Bricolage Grotesque', 'Trebuchet MS', Georgia, serif;
   --body:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono:'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
 
   --wrap:1200px;
   --gut:clamp(1.25rem, 4vw, 2.5rem);
@@ -93,7 +92,7 @@ button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
 
 /* ---------- tipografia ---------- */
 .eyebrow{
-  font-family:var(--mono);
+  font-family:var(--body);
   font-size:.7rem;
   letter-spacing:.2em;
   text-transform:uppercase;
@@ -135,56 +134,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .btn--ghost:hover{border-color:var(--gold);background:rgba(224,177,85,.07)}
 
 .btn--sm{padding:.68rem 1.25rem;font-size:.875rem}
-
-/* ============================================================
-   ALTÍMETRO — o elemento-assinatura.
-   Trilho fixo à esquerda: uma marcação por seção, preenchimento
-   dourado conforme a rolagem e o nome da seção atual na vertical.
-   É o mapa da rota da página. Escondido abaixo de 1200px.
-   ============================================================ */
-.alti{
-  position:fixed;left:26px;top:0;bottom:0;width:44px;
-  z-index:40;pointer-events:none;
-  display:none;
-}
-.alti__track{
-  position:absolute;left:9px;top:14vh;bottom:14vh;width:1px;
-  background:var(--line-soft);
-}
-.alti__fill{
-  position:absolute;left:9px;top:14vh;width:1px;height:0;
-  background:linear-gradient(180deg,rgba(224,177,85,.25),var(--gold));
-}
-.alti__marks{position:absolute;left:0;top:14vh;bottom:14vh;width:44px;pointer-events:auto}
-.alti__mark{
-  position:absolute;left:0;width:22px;height:14px;
-  display:flex;align-items:center;
-  cursor:pointer;background:none;
-}
-.alti__mark::before{
-  content:"";width:9px;height:1px;background:var(--line-soft);
-  transition:width .2s ease, background-color .2s ease;
-}
-.alti__mark:hover::before{width:18px;background:var(--gold)}
-.alti__mark[aria-current="true"]::before{width:18px;background:var(--gold)}
-.alti__label{
-  position:absolute;left:22px;bottom:14vh;
-  writing-mode:vertical-rl;transform:rotate(180deg);
-  font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;
-  text-transform:uppercase;color:var(--fog);
-  transition:opacity .25s ease;
-}
-
-/* barra de progresso simples no topo, para telas menores */
-.topbar{
-  position:fixed;top:0;left:0;height:2px;width:0;
-  background:var(--gold);z-index:60;
-}
-
-@media (min-width:1200px){
-  .alti{display:block}
-  .topbar{display:none}
-}
 
 /* ============================================================
    HEADER
@@ -269,7 +218,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .hero__title em{font-style:normal;color:var(--gold-lt)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.2rem}
 .hero__note{
-  font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  font-family:var(--body);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--fog);margin-top:1.6rem;
 }
 
@@ -347,11 +296,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
   border-top:1px solid var(--line-soft);
 }
 .stages__label{
-  width:100%;font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;
+  width:100%;font-family:var(--body);font-size:.66rem;letter-spacing:.2em;
   text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;
 }
 .stage{
-  font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
+  font-family:var(--body);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
   color:var(--fog);border:1px solid var(--line-soft);border-radius:999px;
   padding:.5rem 1rem;
 }
@@ -368,7 +317,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
   font-weight:500;line-height:1.35;color:var(--snow);
   margin-top:2rem;
 }
-.pull cite{display:block;font-family:var(--mono);font-style:normal;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);margin-top:.9rem}
+.pull cite{display:block;font-family:var(--body);font-style:normal;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);margin-top:.9rem}
 @media (min-width:900px){.manifesto{grid-template-columns:.85fr 1.15fr}}
 
 /* ============================================================
@@ -382,7 +331,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 }
 .theme:hover{background:var(--slate)}
 .theme__k{
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+  font-family:var(--body);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
   color:var(--gold);display:block;margin-bottom:1.1rem;
 }
 .theme h3{font-size:1.18rem;margin-bottom:.7rem;line-height:1.25}
@@ -401,9 +350,9 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
   transition:border-color .22s ease, transform .22s ease;
 }
 .format:hover{border-color:var(--line);transform:translateY(-3px)}
-.format__t{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.format__t{font-family:var(--body);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .format h3{font-size:1.3rem;margin-bottom:.55rem}
-.format__d{font-family:var(--mono);font-size:.78rem;color:var(--snow);margin-bottom:1rem}
+.format__d{font-family:var(--body);font-size:.78rem;color:var(--snow);margin-bottom:1rem}
 .format p{font-size:.95rem;color:var(--fog)}
 @media (min-width:820px){.formats{grid-template-columns:repeat(3,1fr)}}
 
@@ -413,7 +362,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
   padding:.6rem 1.15rem;font-size:.875rem;color:var(--fog);
 }
 .chips__label{
-  width:100%;font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;
+  width:100%;font-family:var(--body);font-size:.68rem;letter-spacing:.18em;
   text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;
 }
 
@@ -425,7 +374,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .about .shot{max-width:400px;position:sticky;top:100px}
 .expeditions{
   display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--gold-lt);
   padding:1.2rem 0;margin:1.8rem 0;
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -450,7 +399,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
   background:var(--summit);border:1px solid var(--gold);
 }
 .stop--now::before{background:var(--gold)}
-.stop__y{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.stop__y{font-family:var(--body);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
 .stop h3{font-size:1.08rem;margin-bottom:.3rem}
 .stop p{font-size:.94rem;color:var(--fog);max-width:52ch}
 
@@ -462,7 +411,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .step__n{
   position:absolute;top:-.72rem;left:0;
   background:var(--ridge);padding-right:.8rem;
-  font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;color:var(--gold);
+  font-family:var(--body);font-size:.72rem;letter-spacing:.2em;color:var(--gold);
 }
 .step h3{font-size:1.15rem;margin-bottom:.5rem}
 .step p{font-size:.95rem;color:var(--fog)}
@@ -509,7 +458,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 .close h2{margin-bottom:1.2rem}
 .close p{color:var(--fog);max-width:44ch;margin:0 auto 2.4rem}
 .close__meta{
-  font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  font-family:var(--body);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--fog);margin-top:1.8rem;
 }
 
@@ -574,15 +523,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </head>
 <body>
 
-<!-- ============ ALTÍMETRO / PROGRESSO ============ -->
-<div class="topbar" id="topbar"></div>
-<div class="alti" aria-hidden="true">
-  <div class="alti__track"></div>
-  <div class="alti__fill" id="altiFill"></div>
-  <div class="alti__marks" id="altiMarks"></div>
-  <div class="alti__label" id="altiLabel">Início</div>
-</div>
-
 <!-- ============ HEADER ============ -->
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
@@ -619,7 +559,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 <main>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="topo" data-route="Início">
+<section class="hero" id="topo">
   <div class="wrap">
     <div class="hero__grid">
       <div>
@@ -669,7 +609,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ EMPRESAS ATENDIDAS ============ -->
-<section class="proof" id="empresas" data-route="Empresas">
+<section class="proof" id="empresas">
   <div class="wrap">
     <div class="proof__head reveal">
       <div>
@@ -716,7 +656,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ MANIFESTO ============ -->
-<section class="band" data-route="O problema">
+<section class="band">
   <div class="wrap manifesto">
     <div class="reveal">
       <span class="eyebrow">O problema</span>
@@ -734,7 +674,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ TEMAS ============ -->
-<section class="band band--ridge" id="temas" data-route="Temas">
+<section class="band band--ridge" id="temas">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Temas</span>
@@ -778,7 +718,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ FORMATOS ============ -->
-<section class="band" id="formatos" data-route="Formatos">
+<section class="band" id="formatos">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Formatos</span>
@@ -819,7 +759,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ SOBRE ============ -->
-<section class="band band--ridge" id="sobre" data-route="Sobre">
+<section class="band band--ridge" id="sobre">
   <div class="wrap about">
     <div class="shot reveal">
       <div class="shot__img">
@@ -855,7 +795,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ TRAJETÓRIA ============ -->
-<section class="band" id="trajetoria" data-route="Trajetória">
+<section class="band" id="trajetoria">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Trajetória</span>
@@ -898,7 +838,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ COMO FUNCIONA ============ -->
-<section class="band band--ridge" data-route="Como contratar">
+<section class="band band--ridge">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Como contratar</span>
@@ -926,7 +866,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="band" id="perguntas" data-route="Perguntas">
+<section class="band" id="perguntas">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Perguntas frequentes</span>
@@ -998,7 +938,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 </section>
 
 <!-- ============ CTA FINAL ============ -->
-<section class="band close" data-route="Contato">
+<section class="band close">
   <div class="wrap">
     <h2 class="h-lg reveal">Traga essa conversa para o seu palco.</h2>
     <p class="reveal" style="--d:.06s">Conte o contexto, o público e a data. O time comercial retorna com formato, disponibilidade e proposta.</p>
@@ -1137,61 +1077,16 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
     if (e.key === 'Escape' && sheet.dataset.open === 'true') { setMenu(false); burger.focus(); }
   });
 
-  /* ---------- altímetro: marcações a partir das seções reais ---------- */
-  var routes = Array.prototype.slice.call(document.querySelectorAll('[data-route]'));
-  var marks  = document.getElementById('altiMarks');
-  var fill   = document.getElementById('altiFill');
-  var label  = document.getElementById('altiLabel');
-  var topbar = document.getElementById('topbar');
-  var nodes  = [];
-
-  routes.forEach(function(sec){
-    var b = document.createElement('button');
-    b.className = 'alti__mark';
-    b.type = 'button';
-    b.tabIndex = -1;
-    b.setAttribute('aria-hidden','true');
-    b.title = sec.dataset.route;
-    b.addEventListener('click', function(){
-      sec.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'start'});
-    });
-    marks.appendChild(b);
-    nodes.push(b);
-  });
-
-  function place(){
-    var docH = document.documentElement.scrollHeight;
-    routes.forEach(function(sec, i){
-      nodes[i].style.top = ((sec.offsetTop / docH) * 100).toFixed(2) + '%';
-    });
-  }
-
+  /* ---------- fundo do header ao rolar ---------- */
   var ticking = false;
   function frame(){
     ticking = false;
-    var y = window.scrollY;
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    var p = max > 0 ? Math.min(y / max, 1) : 0;
-
-    hdr.classList.toggle('hdr--stuck', y > 12);
-    fill.style.height = 'calc((100% - 28vh) * ' + p + ')';
-    topbar.style.width = (p * 100) + '%';
-
-    /* seção atual = a última cujo topo já passou de 45% da viewport */
-    var cur = routes[0];
-    var idx = 0;
-    for (var i = 0; i < routes.length; i++){
-      if (routes[i].getBoundingClientRect().top <= window.innerHeight * 0.45){ cur = routes[i]; idx = i; }
-    }
-    if (label.textContent !== cur.dataset.route) label.textContent = cur.dataset.route;
-    nodes.forEach(function(n, i){ n.setAttribute('aria-current', String(i === idx)); });
+    hdr.classList.toggle('hdr--stuck', window.scrollY > 12);
   }
   function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
 
   window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', function(){ place(); onScroll(); });
-  window.addEventListener('load', function(){ place(); onScroll(); });
-  place(); frame();
+  frame();
 
   /* ---------- FAQ ---------- */
   var faq = document.getElementById('faq');
