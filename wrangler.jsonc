@@ -1,0 +1,32 @@
+{
+  // Worker de assets estaticos. O build copia os arquivos para dist/ e o deploy
+  // publica esse diretorio. Ver README.md.
+  "name": "gustavo-sampaio-palestras",
+  "compatibility_date": "2026-09-19",
+
+  // O worker so existe para tirar o /palestras do caminho antes de servir o
+  // arquivo estatico. Ver worker.js.
+  "main": "worker.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+
+  // Declarar "routes" desliga o *.workers.dev por padrao; este true mantem
+  // https://gustavo-sampaio-palestras.gustavosampaio1717.workers.dev/ no ar como
+  // reserva, servindo a mesma pagina na raiz.
+  "workers_dev": true,
+
+  // Endereco oficial da pagina. O apex e o www servem o site sem redirecionar um
+  // para o outro, entao os dois precisam de rota.
+  "routes": [
+    {
+      "pattern": "eusougustavosampaio.com/palestras*",
+      "zone_name": "eusougustavosampaio.com"
+    },
+    {
+      "pattern": "www.eusougustavosampaio.com/palestras*",
+      "zone_name": "eusougustavosampaio.com"
+    }
+  ]
+}

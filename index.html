@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#060910">
+<meta name="theme-color" content="#151605">
 
-<title>Gustavo Sampaio | Palestrante — liderança, inteligência emocional e sucessão</title>
-<meta name="description" content="Contrate Gustavo Sampaio para o seu evento. Palestras sobre liderança, inteligência emocional e sucessão em empresas familiares, com base em 3.300 horas de mentoria e mais de 500 negócios acompanhados.">
+<title>Gustavo Sampaio | Palestrante — palestras e treinamentos para empresas</title>
+<meta name="description" content="Leve Gustavo Sampaio para a sua empresa. Palestras para convenções de vendas, encontros de liderança, eventos empresariais e treinamentos de equipes, personalizadas de acordo com o público, o segmento e os objetivos da organização.">
 <meta name="author" content="Gustavo Sampaio">
 <link rel="canonical" href="https://eusougustavosampaio.com/palestras/">
 
@@ -15,957 +15,959 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Gustavo Sampaio">
 <meta property="og:title" content="Gustavo Sampaio | Palestrante">
-<meta property="og:description" content="Liderança, inteligência emocional e sucessão em empresas familiares. Palestras para convenções, congressos e programas de liderança.">
+<meta property="og:description" content="Não é apenas uma palestra. É uma experiência criada para provocar reflexão, gerar movimento e transformar conhecimento em atitude.">
 <meta property="og:url" content="https://eusougustavosampaio.com/palestras/">
-<meta property="og:image" content="https://eusougustavosampaio.com/palestras/images/gustavo-terno-escuro.jpg">
+<meta property="og:image" content="https://eusougustavosampaio.com/palestras/images/kit/og-palestras.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gustavo Sampaio no palco, sorrindo, com o microfone na mão">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gustavo Sampaio | Palestrante">
-<meta name="twitter:description" content="Liderança, inteligência emocional e sucessão em empresas familiares.">
-<meta name="twitter:image" content="https://eusougustavosampaio.com/palestras/images/gustavo-terno-escuro.jpg">
+<meta name="twitter:description" content="Não é apenas uma palestra. É uma experiência criada para provocar reflexão, gerar movimento e transformar conhecimento em atitude.">
+<meta name="twitter:image" content="https://eusougustavosampaio.com/palestras/images/kit/og-palestras.jpg">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060910'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23E0B155' text-anchor='middle'%3EGS%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151605'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='800' fill='%23EBCB6C' text-anchor='middle'%3EGS%3C/text%3E%3C/svg%3E">
 
 <!-- marca que há JS: sem isso, o conteúdo do reveal nunca fica invisível -->
 <script>document.documentElement.className += ' js';</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- imagem da capa (LCP): uma por enquadramento, a mesma regra do <picture> -->
+<link rel="preload" as="image" href="images/kit/hero-figura.webp" media="(min-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/kit/hero-full.webp" media="(max-width: 759px)" fetchpriority="high">
+
+<!-- a fonte que desenha a capa chega junto com o HTML (as outras três só carregam quando a seção delas aparece) -->
+<link rel="preload" as="font" type="font/woff2" href="fonts/urbanist-latin.woff2" crossorigin>
 
 <style>
 /* ============================================================
-   TOKENS
-   Paleta: dourado metálico sobre azul-meia-noite.
-   O dourado é usado como material (fios, marcações, texto de
-   dado) — nunca como mancha grande.
+   FONTES — hospedadas aqui, não no Google Fonts: sem folha externa
+   travando o primeiro desenho, sem conexão com terceiro e sem mandar
+   o IP do visitante para fora. As três são SIL Open Font License
+   (fonts/OFL-*.txt). Subconjunto "latin": cobre o português inteiro.
+   ============================================================ */
+@font-face{font-family:'Urbanist';font-style:normal;font-weight:300 800;font-display:swap;src:url(fonts/urbanist-latin.woff2) format('woff2')}
+@font-face{font-family:'Urbanist';font-style:italic;font-weight:300 800;font-display:swap;src:url(fonts/urbanist-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/anton-latin.woff2) format('woff2')}
+@font-face{font-family:'Oooh Baby';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/oooh-baby-latin.woff2) format('woff2')}
+
+/* ============================================================
+   Página construída a partir do mídia kit PALESTRAS-GUSTAVO-SAMPAIO.pdf
+   (8 páginas, 02/09/2026). Cada <section> é uma página do kit, na
+   mesma ordem, com a luz daquela página: preto-oliva e âmbar na capa,
+   grafite no retrato, palco, azul do Everest, taupe de estúdio,
+   preto-petróleo no fechamento.
+   · Texto: literal do PDF.
+   · Cores: medidas em pixel nas páginas nativas (2480x3543).
+   · Tipos: o kit usa Gilroy (comercial). Urbanist é a substituta do
+     Google Fonts que bateu na medição (largura das palavras -0,4%);
+     Anton é a própria condensada do kit; Oooh Baby faz a assinatura.
+   · Caminhos de asset sempre RELATIVOS ("images/..."), porque o site
+     é servido em /palestras/ — ver cloudflare-worker.js.
    ============================================================ */
 :root{
-  --summit:#060910;      /* base da página */
-  --ridge:#0B0F1B;       /* faixas alternadas */
-  --slate:#121826;       /* superfície de card */
-  --gold:#E0B155;        /* acento principal */
-  --gold-lt:#F2D9A0;     /* acento claro, texto */
-  --snow:#EDEAE4;        /* texto principal, branco quente */
-  --fog:#98A0B2;         /* texto secundário */
-  --wa:#25D366;          /* WhatsApp — só em controles de WhatsApp */
-  --wa-dark:#1BAF52;
+  /* dourado dos títulos: degradê vertical por linha, quase chapado em cima */
+  --gold-0:#EBCB6D; --gold-25:#E8C96A; --gold-50:#E0C261; --gold-75:#CFB450; --gold-100:#BAA33C;
+  /* a linha fina (peso light) é um tom abaixo */
+  --goldl-0:#E1C362; --goldl-25:#D6BA55; --goldl-50:#C5AD44; --goldl-75:#B39D34; --goldl-100:#A18E29;
+  --gold:#EBCB6C;         /* dourado chapado: subtítulos, listas, bordas */
+  --sun:#FED145;          /* amarelo vivo das citações — não é o dourado */
+  --snow:#FFFFFF;         /* todo texto corrido do kit é branco puro */
+  --wa:#1E7D45;           /* WhatsApp escurecido: verde de plataforma não entra cru sobre preto e dourado */
+  --wa-hover:#249250;
 
-  --line:rgba(224,177,85,.16);
-  --line-soft:rgba(237,234,228,.09);
+  --capa:#151605;         /* p1 · preto-oliva */
+  --grafite:#242321;      /* p2 · cinza-carvão quente */
+  --palco:#050302;        /* p3 · quase preto, marrom */
+  --ambar:#1C1401;        /* p5 · preto-âmbar */
+  --petroleo:#0D1818;     /* p8 · preto-petróleo */
 
-  --display:'Bricolage Grotesque', 'Trebuchet MS', Georgia, serif;
-  --body:'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sans:'Urbanist', 'Century Gothic', 'Avenir Next', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --cond:'Anton', 'Arial Narrow', Impact, sans-serif;
+  --script:'Oooh Baby', 'Segoe Script', 'Brush Script MT', cursive;
 
-  --wrap:1200px;
-  --gut:clamp(1.25rem, 4vw, 2.5rem);
+  --wrap:1240px;
+  --gut:clamp(1.25rem, 5vw, 3rem);
+  --edge:max(var(--gut), calc((100vw - var(--wrap)) / 2 + var(--gut)));  /* margem do texto em seção de foto sangrada */
   --band:clamp(4.5rem, 9vw, 8rem);
-  --r:14px;
+  --hdr:72px;
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 
 body{
-  background:var(--summit);
+  background:var(--capa);
   color:var(--snow);
-  font-family:var(--body);
+  font-family:var(--sans);
+  font-weight:300;
   font-size:1.0625rem;
-  line-height:1.65;
+  line-height:1.5;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
+@media (min-width:900px){ body{font-size:1.1875rem} }
 
-img{max-width:100%;display:block}
+img,svg{display:block;max-width:100%}
+img{height:auto}
 a{color:inherit;text-decoration:none}
+ul{list-style:none}
 button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+strong,b{font-weight:700}
 
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
-
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:4px}
 ::selection{background:var(--gold);color:#0a0a0a}
+
+[id]{scroll-margin-top:calc(var(--hdr) + 12px)}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
 
-.band{padding:var(--band) 0;position:relative}
-.band--ridge{background:var(--ridge);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-[id]{scroll-margin-top:96px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 
-/* ---------- tipografia ---------- */
-.eyebrow{
-  font-family:var(--body);
-  font-size:.7rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:var(--gold);
-  display:block;
-  margin-bottom:1.1rem;
+.skip{
+  position:fixed;left:1rem;top:-5rem;z-index:100;
+  background:var(--gold);color:#0a0a0a;font-weight:700;
+  padding:.8rem 1.2rem;border-radius:8px;transition:top .2s;
 }
-.eyebrow--fog{color:var(--fog)}
+.skip:focus{top:1rem}
 
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.02em}
+/* ---------- dourado em degradê (o traço do kit) ---------- */
+.gold,.goldl,.bronze,.bronzel,.everest-a,.everest-b,.sunset{color:var(--gold)}
+.bronze,.bronzel{color:#B58236}
+.sunset{color:#FFE473}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .gold,.goldl,.bronze,.bronzel,.everest-a,.everest-b,.sunset{
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;
+    /* respiro para til, acento e cedilha não ficarem fora da área pintada */
+    padding:.18em .05em .12em;margin:-.18em -.05em -.12em;
+  }
+  .gold{background-image:linear-gradient(180deg,var(--gold-0) 18%,var(--gold-25) 36%,var(--gold-50) 52%,var(--gold-75) 68%,var(--gold-100) 84%)}
+  .goldl{background-image:linear-gradient(180deg,var(--goldl-0) 18%,var(--goldl-25) 36%,var(--goldl-50) 52%,var(--goldl-75) 68%,var(--goldl-100) 84%)}
+  /* p2: "QUEM É" corre na horizontal; "GUSTAVO SAMPAIO" desce, com o ponto quente em cima */
+  .bronze{background-image:linear-gradient(90deg,#BC8836 0%,#B58236 40%,#A87937 70%,#966A3D 100%)}
+  .bronzel{background-image:linear-gradient(180deg,#D58938 18%,#C68436 26%,#B17B33 36%,#9E7431 52%,#926C30 68%,#8C6D33 84%)}   /* último tom no kit é #83662F (2,7:1); #8C6D33 dá 3:1 */
+  /* p4: outro dourado, mais alaranjado; o degradê atravessa o bloco de duas linhas */
+  .everest-a{background-image:linear-gradient(180deg,#BDA653 20%,#D2AA51 82%)}
+  .everest-b{background-image:linear-gradient(180deg,#DBB056 18%,#DBB056 50%,#CDA751 68%,#B79846 84%)}
+  /* p7: RESULTADOS corre na horizontal, com o brilho pálido em ~34% */
+  .sunset{background-image:linear-gradient(90deg,#FFCE6B 0%,#FFE97A 11%,#FFFF8D 19%,#FFFFA6 34%,#FFFF85 49%,#FFE473 57%,#FFD46A 65%,#FFCB66 72%,#FFFF73 92%,#FFFF7D 100%)}
+}
 
-.h-xl{font-size:clamp(2.5rem,6vw,4.75rem);font-weight:700;letter-spacing:-.035em}
-.h-lg{font-size:clamp(1.85rem,3.6vw,3rem)}
-.h-md{font-size:clamp(1.35rem,2.2vw,1.75rem)}
+/* ---------- títulos: uma linha fina, uma pesada ---------- */
+.ttl{line-height:1;text-transform:uppercase;letter-spacing:-.012em}
+.ttl > span{display:block}
+.ttl__l{font-weight:300}
+.ttl__h{font-weight:800}
+.ttl b{font-weight:800}
 
-.lead{font-size:clamp(1.0625rem,1.35vw,1.2rem);color:var(--fog);max-width:52ch}
+p + p{margin-top:1.3em}
 
-.sec-head{max-width:56ch;margin-bottom:clamp(2.5rem,5vw,4rem)}
-.sec-head p{color:var(--fog);margin-top:1rem}
-
-.rule{height:1px;background:var(--line-soft);border:0;margin:0}
+/* texto corrido justificado como no kit — só onde a coluna aguenta */
+@media (min-width:1100px){
+  .just p{text-align:justify}   /* sem hifenização: ela quebrava nome próprio ("Paulo Vi-eira") */
+}
 
 /* ---------- botões ---------- */
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:.65rem;
-  padding:1.05rem 1.85rem;
-  border-radius:999px;
-  font-weight:600;font-size:.95rem;letter-spacing:.01em;
-  transition:transform .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
-  white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;gap:.7em;
+  min-height:54px;padding:.9em 2em;border-radius:100px;
+  font-weight:800;font-size:.9rem;line-height:1.1;letter-spacing:.08em;text-transform:uppercase;text-align:center;
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
 }
-.btn svg{width:19px;height:19px;flex:none;fill:currentColor}
-.btn:hover{transform:translateY(-2px)}
+.btn svg{width:1.4em;height:1.4em;flex:none;fill:currentColor}
+.btn--gold{
+  color:#17130a;
+  background:linear-gradient(180deg,var(--gold-0) 0%,var(--gold-50) 55%,var(--gold-100) 100%);
+  box-shadow:0 12px 32px -14px rgba(235,203,108,.6);
+}
+.btn--gold:hover{transform:translateY(-2px);box-shadow:0 18px 38px -14px rgba(235,203,108,.75)}
+.btn--line{color:var(--gold);border:1.5px solid var(--gold);background:rgba(0,0,0,.2)}
+.btn--line:hover{background:var(--gold);color:#17130a}
+.btn--sm{min-height:44px;padding:.6em 1.4em;font-size:.8125rem;letter-spacing:.06em}
+@media (max-width:380px){ .btn{padding:.9em 1.35em;font-size:.84rem;letter-spacing:.05em} }   /* cabe em uma linha a 320px */
 
-.btn--wa{background:var(--wa);color:#04240f;box-shadow:0 10px 30px -12px rgba(37,211,102,.55)}
-.btn--wa:hover{background:var(--wa-dark)}
+.lnk{
+  display:inline-flex;align-items:center;gap:.5em;min-height:44px;
+  font-weight:500;font-size:1rem;letter-spacing:.03em;
+  transition:color .2s;
+}
+.lnk:hover{color:var(--gold)}
+.lnk svg{width:1.05em;height:1.05em;fill:none;stroke:currentColor;stroke-width:2}
 
-.btn--ghost{border:1px solid var(--line);color:var(--snow)}
-.btn--ghost:hover{border-color:var(--gold);background:rgba(224,177,85,.07)}
-
-.btn--sm{padding:.68rem 1.25rem;font-size:.875rem}
+/* ---------- citação: moldura amarela, aspas montadas sobre a borda ---------- */
+.aspas{
+  position:relative;
+  padding:clamp(1.7rem,3vw,2.3rem) clamp(2.2rem,4.4vw,3.6rem) clamp(1.7rem,3vw,2.3rem) clamp(2.4rem,4.6vw,3.7rem);
+  color:var(--sun);
+  font-style:italic;font-weight:400;
+  font-size:clamp(1.3rem,2.35vw,1.95rem);line-height:1.2;
+}
+.aspas__moldura{
+  position:absolute;inset:0;border:2px solid var(--sun);border-radius:clamp(28px,3.6vw,46px);pointer-events:none;
+  /* a borda some atrás das aspas, como no kit */
+  -webkit-mask:linear-gradient(#000 0 0), linear-gradient(#000 0 0) left -4px top 1.2em / 1.4em 2.9em no-repeat, linear-gradient(#000 0 0) right -4px bottom 1.5em / 1.4em 2.9em no-repeat;
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0), linear-gradient(#000 0 0) left -4px top 1.2em / 1.4em 2.9em no-repeat, linear-gradient(#000 0 0) right -4px bottom 1.5em / 1.4em 2.9em no-repeat;
+  mask-composite:exclude;
+}
+.aspas::before,.aspas::after{
+  position:absolute;font-style:normal;font-weight:800;line-height:1;color:var(--sun);
+  font-size:clamp(6.2rem,10.5vw,9.2rem);height:.42em;overflow:visible;   /* no kit cada par ocupa ~14% da largura da caixa */
+}
+.aspas::before{content:"\201C";left:-.27em;top:.04em}
+.aspas::after{content:"\201D";right:-.27em;bottom:.3em}
+.aspas p{position:relative;max-width:21ch}
+.aspas--larga p{max-width:27ch}
 
 /* ============================================================
-   HEADER
+   CABEÇALHO
    ============================================================ */
 .hdr{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  transition:background-color .3s ease, border-color .3s ease, backdrop-filter .3s ease;
-  border-bottom:1px solid transparent;
+  position:fixed;inset:0 0 auto 0;z-index:50;height:var(--hdr);
+  display:flex;align-items:center;
+  transition:background-color .3s ease, box-shadow .3s ease;
 }
-.hdr--stuck{
-  background:rgba(6,9,16,.82);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-bottom-color:var(--line-soft);
-}
-.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:72px}
-
-.mark{display:flex;align-items:baseline;gap:.55rem;font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:1.02rem}
-.mark span{color:var(--gold)}
-
-.nav{display:none;gap:2rem;align-items:center}
-.nav a{
-  font-size:.9rem;color:var(--fog);
-  position:relative;padding:.25rem 0;
-  transition:color .18s ease;
-}
-.nav a::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:var(--gold);transform:scaleX(0);transform-origin:left;
-  transition:transform .22s ease;
-}
-.nav a:hover{color:var(--snow)}
-.nav a:hover::after{transform:scaleX(1)}
-
+.hdr.is-solid{background:rgba(10,11,4,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(235,203,108,.18)}
+.hdr__in{width:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.marca{font-size:1rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;display:inline-flex;align-items:center;min-height:44px;color:var(--gold)}
+.marca b{font-weight:800}
+.nav{display:none;gap:clamp(1rem,2vw,2rem)}
+.nav a{font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 0;transition:color .2s}
+.nav a:hover{color:var(--gold)}
 .hdr__cta{display:none}
+.burger{width:44px;height:44px;display:grid;place-items:center;margin-right:-8px}
+.burger span,.burger span::before,.burger span::after{display:block;width:24px;height:2px;background:var(--gold);border-radius:2px;transition:transform .25s ease, opacity .2s ease}
+.burger span{position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}
+.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
 
-.burger{
-  display:flex;flex-direction:column;justify-content:center;gap:5px;
-  width:44px;height:44px;align-items:flex-end;
+.sheet{
+  position:fixed;inset:var(--hdr) 0 0 0;z-index:49;
+  background:rgba(10,11,4,.98);
+  display:flex;flex-direction:column;gap:.25rem;padding:1.5rem var(--gut) 2rem;overflow-y:auto;
+  visibility:hidden;opacity:0;transform:translateY(-8px);
+  transition:opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
 }
-.burger i{display:block;height:1.5px;width:22px;background:var(--snow);transition:transform .25s ease, opacity .2s ease}
-.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
-.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.sheet.is-open{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+.sheet a:not(.btn){font-size:1.3rem;font-weight:300;text-transform:uppercase;letter-spacing:.06em;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.sheet .btn{margin-top:1.5rem}
+body.is-locked{overflow:hidden}
 
-@media (min-width:900px){
+@media (min-width:1000px){
   .nav{display:flex}
   .hdr__cta{display:inline-flex}
-  .burger{display:none}
-}
-
-/* menu mobile */
-.sheet{
-  position:fixed;inset:72px 0 0;z-index:45;
-  background:rgba(6,9,16,.97);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  padding:2.5rem var(--gut) 3rem;
-  display:flex;flex-direction:column;gap:.25rem;
-  transform:translateY(-8px);opacity:0;visibility:hidden;
-  transition:opacity .22s ease, transform .22s ease, visibility .22s;
-}
-.sheet[data-open="true"]{opacity:1;visibility:visible;transform:none}
-.sheet a{
-  font-family:var(--display);font-size:1.7rem;font-weight:600;letter-spacing:-.02em;
-  padding:.7rem 0;border-bottom:1px solid var(--line-soft);
-}
-.sheet .btn{margin-top:2rem;align-self:flex-start}
-
-/* ============================================================
-   HERO
-   ============================================================ */
-.hero{padding:calc(72px + clamp(3rem,7vw,5.5rem)) 0 0;position:relative;overflow:hidden}
-.hero::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 55% at 72% 22%, rgba(224,177,85,.10) 0%, transparent 70%);
-}
-.hero__grid{
-  display:grid;gap:clamp(2.5rem,5vw,4.5rem);
-  align-items:center;position:relative;
-}
-.hero__title{margin:.4rem 0 1.5rem}
-.hero__title em{font-style:normal;color:var(--gold-lt)}
-.hero__actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.2rem}
-.hero__note{
-  font-family:var(--body);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--fog);margin-top:1.6rem;
-}
-
-/* moldura da foto: fio dourado deslocado atrás da imagem */
-.shot{position:relative;max-width:460px;width:100%;justify-self:center}
-.shot::before{
-  content:"";position:absolute;inset:-18px -18px 42px 22px;
-  border:1px solid var(--line);border-radius:var(--r);
-}
-.shot__img{
-  position:relative;border-radius:var(--r);overflow:hidden;
-  aspect-ratio:4/5;background:var(--slate);
-}
-.shot__img img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-.shot__img::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 55%,rgba(6,9,16,.85) 100%);
-}
-
-/* faixa de números */
-.figures{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:1px;background:var(--line-soft);
-  margin-top:clamp(3.5rem,7vw,5.5rem);
-  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
-}
-.figure{background:var(--summit);padding:1.6rem 1.35rem}
-.figure__n{
-  font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);
-  color:var(--gold);letter-spacing:-.03em;line-height:1;
-}
-.figure__l{font-size:.86rem;color:var(--fog);margin-top:.55rem;line-height:1.45}
-
-@media (min-width:880px){
-  .hero__grid{grid-template-columns:1.08fr .92fr}
-  .figures{grid-template-columns:repeat(4,1fr)}
+  .burger,.sheet{display:none}
 }
 
 /* ============================================================
-   PROVA SOCIAL — empresas atendidas e palcos
-   Grade fixa em vez de marquee: com 16 marcas, ver todas de uma
-   vez diz mais do que vê-las passar.
+   1 · CAPA
    ============================================================ */
-.proof{padding:clamp(3.5rem,7vw,5.5rem) 0}
-.proof__head{
-  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
-  gap:1.25rem 2.5rem;margin-bottom:clamp(2rem,4vw,3rem);
+.capa{
+  position:relative;isolation:isolate;overflow:hidden;
+  min-height:100vh;min-height:100svh;
+  display:flex;align-items:flex-end;
+  padding:calc(var(--hdr) + 2rem) var(--gut) clamp(2.5rem,7vh,4.5rem);
+  background:var(--capa);
 }
-.proof__head p{color:var(--fog);font-size:.95rem;max-width:42ch}
+.capa__fig{position:absolute;inset:0;z-index:-2;display:block}
+.capa__fig img{width:100%;height:100%;object-fit:cover;object-position:78% 0}
+.capa::after{  /* chão escuro para o texto assentar sobre a foto no celular: o nome passa por cima da camisa branca */
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(21,22,5,.6) 0%,rgba(21,22,5,0) 15%,rgba(21,22,5,0) 31%,rgba(16,17,4,.8) 45%,rgba(16,17,4,.94) 60%,#10110a 100%);
+}
+.capa__txt{width:100%;max-width:calc(var(--wrap) - 2 * var(--gut));margin:0 auto}
+.nome{line-height:.95;text-transform:uppercase;font-size:clamp(2.9rem,13.6vw,5.6rem);letter-spacing:-.012em}
+.nome > span{display:block}
+.nome__g{font-weight:800}
+.nome__s{font-weight:300;font-size:.835em;letter-spacing:-.004em}
+.arroba{display:inline-flex;align-items:center;min-height:44px;margin-top:.55rem;color:var(--gold);font-weight:400;font-size:clamp(1.05rem,2.7vw,1.4rem);transition:color .2s}
+.arroba:hover{color:var(--snow)}
+.capa__lead{margin-top:.9rem;max-width:33rem}
+.capa__cta{margin-top:1.7rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.75rem}
 
-.logos{
-  display:grid;grid-template-columns:repeat(2,1fr);
-  gap:1px;background:var(--line-soft);
-  border:1px solid var(--line-soft);border-radius:var(--r);overflow:hidden;
-}
-.logo{
-  background:var(--ridge);
-  min-height:106px;display:flex;align-items:center;justify-content:center;
-  padding:1.25rem 1.4rem;
-}
-.logo img{
-  max-height:var(--lh,34px);max-width:84%;width:auto;
-  object-fit:contain;
-  filter:brightness(0) invert(1);   /* tudo em branco sólido, independente da cor original */
-  opacity:.5;
-  transition:opacity .22s ease, transform .22s ease;
-}
-.logo:hover img{opacity:1;transform:scale(1.045)}
-@media (min-width:640px){.logos{grid-template-columns:repeat(3,1fr)}}
-@media (min-width:980px){.logos{grid-template-columns:repeat(4,1fr)}}
-
-.stages{
-  display:flex;flex-wrap:wrap;gap:.55rem;
-  margin-top:clamp(2rem,4vw,2.75rem);padding-top:1.9rem;
-  border-top:1px solid var(--line-soft);
-}
-.stages__label{
-  width:100%;font-family:var(--body);font-size:.66rem;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;
-}
-.stage{
-  font-family:var(--body);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--fog);border:1px solid var(--line-soft);border-radius:999px;
-  padding:.5rem 1rem;
-}
-
-/* ============================================================
-   MANIFESTO
-   ============================================================ */
-.manifesto{display:grid;gap:clamp(2rem,4vw,3.5rem)}
-.manifesto p{color:var(--fog);margin-bottom:1.15rem;max-width:60ch}
-.pull{
-  border-left:2px solid var(--gold);
-  padding:.2rem 0 .2rem 1.5rem;
-  font-family:var(--display);font-size:clamp(1.15rem,1.9vw,1.5rem);
-  font-weight:500;line-height:1.35;color:var(--snow);
-  margin-top:2rem;
-}
-.pull cite{display:block;font-family:var(--body);font-style:normal;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);margin-top:.9rem}
-@media (min-width:900px){.manifesto{grid-template-columns:.85fr 1.15fr}}
-
-/* ============================================================
-   TEMAS
-   ============================================================ */
-.themes{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--r);overflow:hidden}
-.theme{
-  background:var(--summit);padding:2.1rem 1.9rem 2.3rem;
-  transition:background-color .22s ease;
-  position:relative;
-}
-.theme:hover{background:var(--slate)}
-.theme__k{
-  font-family:var(--body);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);display:block;margin-bottom:1.1rem;
-}
-.theme h3{font-size:1.18rem;margin-bottom:.7rem;line-height:1.25}
-.theme p{font-size:.95rem;color:var(--fog)}
-@media (min-width:700px){.themes{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:1000px){.themes{grid-template-columns:repeat(3,1fr)}}
-
-/* ============================================================
-   FORMATOS + PARA QUEM
-   ============================================================ */
-.formats{display:grid;gap:1.25rem}
-.format{
-  border:1px solid var(--line-soft);border-radius:var(--r);
-  padding:2rem 1.8rem;background:var(--summit);
-  display:flex;flex-direction:column;
-  transition:border-color .22s ease, transform .22s ease;
-}
-.format:hover{border-color:var(--line);transform:translateY(-3px)}
-.format__t{font-family:var(--body);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.format h3{font-size:1.3rem;margin-bottom:.55rem}
-.format__d{font-family:var(--body);font-size:.78rem;color:var(--snow);margin-bottom:1rem}
-.format p{font-size:.95rem;color:var(--fog)}
-@media (min-width:820px){.formats{grid-template-columns:repeat(3,1fr)}}
-
-.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:clamp(2.5rem,5vw,3.5rem)}
-.chip{
-  border:1px solid var(--line-soft);border-radius:999px;
-  padding:.6rem 1.15rem;font-size:.875rem;color:var(--fog);
-}
-.chips__label{
-  width:100%;font-family:var(--body);font-size:.68rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;
-}
-
-/* ============================================================
-   SOBRE
-   ============================================================ */
-.about{display:grid;gap:clamp(2.5rem,5vw,4rem);align-items:start}
-.about p{color:var(--fog);margin-bottom:1.15rem}
-.about .shot{max-width:400px;position:sticky;top:100px}
-.expeditions{
-  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;
-  font-family:var(--body);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--gold-lt);
-  padding:1.2rem 0;margin:1.8rem 0;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-}
-.creds{display:grid;gap:.9rem;margin-top:2rem}
-.cred{display:flex;gap:.9rem;align-items:baseline;font-size:.93rem}
-.cred::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none;transform:translateY(-3px)}
-.cred b{font-weight:600;color:var(--snow)}
-.cred span{color:var(--fog)}
-@media (min-width:900px){.about{grid-template-columns:.8fr 1.2fr}}
-
-/* ============================================================
-   TRAJETÓRIA
-   ============================================================ */
-.track{position:relative;padding-left:1.9rem;max-width:58rem}
-.track::before{content:"";position:absolute;left:4px;top:.6rem;bottom:.6rem;width:1px;background:var(--line-soft)}
-.stop{position:relative;padding-bottom:2.2rem}
-.stop:last-child{padding-bottom:0}
-.stop::before{
-  content:"";position:absolute;left:-1.9rem;top:.55rem;
-  width:9px;height:9px;border-radius:50%;
-  background:var(--summit);border:1px solid var(--gold);
-}
-.stop--now::before{background:var(--gold)}
-.stop__y{font-family:var(--body);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
-.stop h3{font-size:1.08rem;margin-bottom:.3rem}
-.stop p{font-size:.94rem;color:var(--fog);max-width:52ch}
-
-/* ============================================================
-   PASSOS
-   ============================================================ */
-.steps{display:grid;gap:2.5rem;counter-reset:s}
-.step{position:relative;padding-top:1.6rem;border-top:1px solid var(--line-soft)}
-.step__n{
-  position:absolute;top:-.72rem;left:0;
-  background:var(--ridge);padding-right:.8rem;
-  font-family:var(--body);font-size:.72rem;letter-spacing:.2em;color:var(--gold);
-}
-.step h3{font-size:1.15rem;margin-bottom:.5rem}
-.step p{font-size:.95rem;color:var(--fog)}
-@media (min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:2rem}}
-
-/* ============================================================
-   FAQ
-   ============================================================ */
-.faq{max-width:56rem;border-top:1px solid var(--line-soft)}
-.faq__item{border-bottom:1px solid var(--line-soft)}
-.faq__q{
-  width:100%;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
-  padding:1.5rem 0;text-align:left;
-  font-family:var(--display);font-size:1.05rem;font-weight:500;letter-spacing:-.01em;
-  transition:color .18s ease;
-}
-.faq__q:hover{color:var(--gold-lt)}
-.faq__sign{
-  position:relative;flex:none;width:30px;height:30px;border-radius:50%;
-  border:1px solid var(--line);
-  transition:transform .35s cubic-bezier(.4,0,.2,1), background-color .25s ease, border-color .25s ease;
-}
-.faq__sign::before,.faq__sign::after{
-  content:"";position:absolute;left:50%;top:50%;background:var(--gold);
-  transition:background-color .25s ease;
-}
-.faq__sign::before{width:11px;height:1px;transform:translate(-50%,-50%)}
-.faq__sign::after{width:1px;height:11px;transform:translate(-50%,-50%)}
-.faq__q[aria-expanded="true"] .faq__sign{transform:rotate(135deg);background:var(--gold);border-color:var(--gold)}
-.faq__q[aria-expanded="true"] .faq__sign::before,
-.faq__q[aria-expanded="true"] .faq__sign::after{background:var(--summit)}
-.faq__a{overflow:hidden;height:0;transition:height .35s cubic-bezier(.4,0,.2,1)}
-.faq__a p{color:var(--fog);font-size:.98rem;padding:0 3rem 1.7rem 0;max-width:60ch}
-
-/* ============================================================
-   CTA FINAL
-   ============================================================ */
-.close{text-align:center;position:relative;overflow:hidden}
-.close::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(50% 70% at 50% 0%, rgba(224,177,85,.13) 0%, transparent 68%);
-}
-.close .wrap{position:relative}
-.close h2{margin-bottom:1.2rem}
-.close p{color:var(--fog);max-width:44ch;margin:0 auto 2.4rem}
-.close__meta{
-  font-family:var(--body);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--fog);margin-top:1.8rem;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.ft{padding:3.5rem 0 4rem;border-top:1px solid var(--line-soft)}
-.ft__in{display:flex;flex-direction:column;gap:2rem;align-items:center;text-align:center}
-.social{display:flex;gap:.75rem}
-.social a{
-  width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--line-soft);
-  display:flex;align-items:center;justify-content:center;
-  transition:border-color .2s ease, background-color .2s ease, transform .2s ease;
-}
-.social a:hover{border-color:var(--gold);background:rgba(224,177,85,.08);transform:translateY(-2px)}
-.social svg{width:17px;height:17px;fill:var(--snow)}
-.ft__legal{font-size:.82rem;color:var(--fog)}
-.ft__legal a{color:var(--gold-lt)}
 @media (min-width:760px){
-  .ft__in{flex-direction:row;justify-content:space-between;text-align:left}
+  .capa{align-items:center;padding-bottom:calc(var(--hdr) * .5)}
+  .capa::before{  /* brilho âmbar que sobe pela borda esquerda da capa */
+    content:"";position:absolute;inset:0;z-index:-3;
+    background:linear-gradient(90deg,#382804 0%,rgba(44,28,3,.75) 12%,rgba(31,23,3,0) 32%);
+  }
+  .capa__fig{inset:0 0 0 auto;width:min(62vw,1100px)}
+  .capa__fig img{object-position:50% 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34%);mask-image:linear-gradient(90deg,transparent 0,#000 34%)}
+  .capa::after{background:linear-gradient(180deg,rgba(21,22,5,.55) 0%,rgba(21,22,5,0) 14%,rgba(21,22,5,0) 82%,rgba(16,17,4,.9) 100%)}
+  .capa__txt > *{max-width:min(45vw,38rem)}
+  .capa__txt > .nome{font-size:clamp(4.2rem,9.3vw,9.5rem);max-width:none}
 }
 
 /* ============================================================
-   WHATSAPP FLUTUANTE
+   2 · QUEM É
    ============================================================ */
+.quem{
+  position:relative;
+  background:linear-gradient(180deg,#2E2C29 0%,#262422 40%,#201F1D 100%);
+}
+.quem__foto{position:relative;overflow:hidden;height:min(118vw,78vh)}
+.quem__foto img{width:100%;height:100%;object-fit:cover;object-position:30% 0}
+.quem__foto::after{content:"";position:absolute;inset:auto 0 0 0;height:34%;background:linear-gradient(180deg,rgba(36,35,33,0),#262422)}
+.quem__txt{position:relative;padding:clamp(2rem,6vw,3.5rem) var(--gut) var(--band);margin-top:-2.5rem}
+.quem .ttl{font-size:clamp(2.2rem,8.2vw,4.1rem);letter-spacing:-.01em}
+.quem .ttl__l{font-size:.95em}
+.quem__abre{margin-top:1.7rem;font-size:1.18em}
+.quem__bio{margin-top:1.5rem;max-width:44rem}
+.quem__exp{margin-top:clamp(2.6rem,5vw,4.2rem);font-size:clamp(1.4rem,2.5vw,1.95rem);font-weight:800;line-height:1.15}
+.nums{margin-top:1rem;font-size:clamp(1.18rem,1.9vw,1.45rem);line-height:1.75}
+.nums strong{font-weight:800}
+
+@media (min-width:700px){   /* duas colunas cedo: empilhado no tablet, o retrato vira um rosto gigante */
+  .quem{display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);align-items:stretch}
+  .quem__foto{height:auto;min-height:100%}
+  .quem__foto img{position:absolute;inset:0;object-position:22% 0;-webkit-mask-image:linear-gradient(90deg,#000 60%,transparent 100%);mask-image:linear-gradient(90deg,#000 60%,transparent 100%)}
+  .quem__foto::after{display:none}
+  .quem__txt{margin-top:0;padding:var(--band) var(--edge) var(--band) clamp(.5rem,2vw,2rem)}
+}
+
+/* ============================================================
+   3 · NÃO É APENAS UMA PALESTRA
+   ============================================================ */
+.exp{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding-top:var(--band);
+  background:var(--palco);
+}
+.exp .ttl{position:relative;z-index:1;font-size:clamp(2.2rem,9.5vw,8.3rem)}
+.exp .ttl__l{font-size:.82em;color:#EACA6C;letter-spacing:-.006em}   /* no kit esta linha é chapada */
+/* celular: a foto é a página inteira do kit (1400x2000) e ele ocupa só o terço esquerdo dela — amplia 140% e
+   desce 70% para o corpo inteiro caber, da cabeça (com folga) aos pés */
+.exp__foto{position:relative;margin-top:-1rem;height:140vw;overflow:hidden;z-index:0}
+.exp__foto img{width:140%;max-width:none;height:100%;object-fit:cover;object-position:0 70%}
+.exp__foto::before{content:"";position:absolute;inset:0 0 auto 0;height:12%;background:linear-gradient(180deg,var(--palco),rgba(5,3,2,0));z-index:1}
+@media (min-width:600px) and (max-width:759px){
+  .exp__foto{height:100vw}
+  .exp__foto img{width:100%}
+}
+.exp__foto::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(180deg,rgba(5,3,2,0),#0B0805)}
+.exp__txt{position:relative;padding:1.5rem var(--gut) var(--band);background:linear-gradient(180deg,#0B0805 0%,#15100B 100%)}
+.exp__abre{font-size:1.1em}
+.exp__sub{margin-top:clamp(2.2rem,4vw,3.4rem);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--gold);line-height:1.2}
+.verbos{margin-top:1.3rem;display:grid;gap:clamp(1.1rem,2.2vw,1.75rem)}
+.verbos strong{display:block;font-weight:800;text-transform:uppercase;line-height:1;font-size:clamp(2.1rem,4.4vw,3.6rem);letter-spacing:-.012em}
+.verbos li > span{display:block;margin-top:.2em;font-size:clamp(1.05rem,1.75vw,1.35rem);line-height:1.3}
+
+@media (min-width:760px){   /* a composição da página 3 do kit: ele à esquerda, título em cima, texto à direita */
+  .exp{padding-bottom:var(--band)}
+  .exp__foto{position:absolute;inset:0 auto 0 0;width:min(60%,1000px);height:auto;max-height:none;margin:0}
+  .exp__foto img{width:100%;object-position:0 100%;-webkit-mask-image:linear-gradient(90deg,#000 58%,transparent 100%);mask-image:linear-gradient(90deg,#000 58%,transparent 100%)}
+  .exp__foto::before{display:none}
+  .exp__foto::after{height:16%;background:linear-gradient(180deg,rgba(5,3,2,0),rgba(5,3,2,.75))}
+  .exp__txt{background:none;margin-left:auto;width:min(50%,46rem + var(--edge));padding:clamp(2.5rem,5vw,4.5rem) var(--edge) 0 0}
+}
+
+/* ============================================================
+   4 · DO EVEREST AOS NEGÓCIOS
+   ============================================================ */
+.everest{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(180deg,#183F60 0%,#1A4168 28%,#18426B 52%,#224167 74%,#2E4C6F 90%,#364052 100%);
+}
+.everest__topo{position:relative;height:clamp(15rem,34.7vw,34rem);overflow:hidden}
+.everest__topo img{width:100%;height:100%;object-fit:cover;object-position:82% 50%}
+.everest__topo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,65,104,0) 52%,#1A4168 100%)}
+.everest__corpo{position:relative;margin-top:clamp(-3.5rem,-4vw,-1.5rem);padding-bottom:clamp(2rem,4vw,3.5rem)}
+.everest .ttl{font-size:clamp(2.05rem,7.3vw,4.35rem);letter-spacing:-.008em}
+.everest .ttl__xl{font-size:1.415em;line-height:1;letter-spacing:-.014em}
+.everest__txt{margin-top:clamp(2rem,4vw,3.2rem);max-width:43rem}
+.everest__sub{margin-top:clamp(2.2rem,4vw,3.2rem);font-size:clamp(1.3rem,2.2vw,1.75rem);font-weight:800}
+.aprend{margin-top:.7rem;color:var(--gold);font-weight:700;font-size:clamp(1.15rem,1.95vw,1.5rem);line-height:1.62}
+.everest__cta{margin-top:2.2rem}
+.everest__lado{position:relative;margin-top:.5rem}
+.everest__pico{
+  width:100%;   /* some pelos quatro lados: o azul da foto não é o mesmo do degradê da seção */
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 32%,#000 64%,transparent 100%),linear-gradient(90deg,transparent 0,#000 22%,#000 78%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-image:linear-gradient(180deg,transparent 0,#000 32%,#000 64%,transparent 100%),linear-gradient(90deg,transparent 0,#000 22%,#000 78%,transparent 100%);
+  mask-composite:intersect;
+}
+.everest__lado .aspas{margin:-4.5rem 0 0 1.4rem;background:rgba(30,34,46,.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:clamp(28px,3.6vw,46px)}
+.everest__base{position:relative}
+.everest__base img{width:100%;height:clamp(8.5rem,24vw,22rem);object-fit:cover;object-position:50% 100%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 52%);mask-image:linear-gradient(180deg,transparent 0,#000 52%)}
+
+@media (min-width:900px){
+  .everest__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,5vw,5rem);align-items:end}
+  .everest__lado{margin-top:0}
+}
+
+/* ============================================================
+   5 · PALESTRAS PARA DIFERENTES DESAFIOS + FORMATOS
+   ============================================================ */
+.pal{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding-top:var(--band);
+  background:
+    linear-gradient(115deg,rgba(150,109,3,0) 58%,rgba(150,109,3,.34) 78%,rgba(89,60,3,.16) 88%,rgba(150,109,3,0) 100%) no-repeat 0 100% / 100% 62%,
+    var(--ambar);
+}
+.pal__head{text-align:center}
+.pal__ttl{font-size:clamp(2.25rem,8.6vw,6.7rem);font-weight:300;line-height:1.03;letter-spacing:-.018em;color:var(--gold)}
+.pal__ttl b{font-weight:760}
+.pal__ttl i{font-style:normal;font-size:.82em;letter-spacing:-.01em}   /* no kit as palavras finas são menores que as pesadas */
+.pal__script{
+  margin-top:.25em;font-family:var(--script);font-weight:400;
+  font-size:clamp(2.3rem,6.6vw,5.2rem);line-height:1.05;
+}
+.tira{margin-top:clamp(1rem,2vw,1.75rem);display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+.tira img{width:100%;height:100%;aspect-ratio:410/386;object-fit:cover}
+.pal__foto{position:relative;height:118vw;max-height:76vh;overflow:hidden}
+.pal__foto img{width:100%;height:100%;object-fit:cover;object-position:40% 4%}
+.pal__foto::before{content:"";position:absolute;inset:0 0 auto 0;height:12%;background:linear-gradient(180deg,var(--ambar),rgba(28,20,1,0));z-index:1}
+.pal__foto::after{content:"";position:absolute;inset:auto 0 0 0;height:36%;background:linear-gradient(180deg,rgba(28,20,1,0),var(--ambar))}
+.pal__fmt{position:relative;padding:1rem 0 var(--band) var(--gut);margin-top:-3rem}
+.fmt__ttl{font-family:var(--cond);font-weight:400;font-size:clamp(2.2rem,4.7vw,3.75rem);line-height:1.1;letter-spacing:.004em;padding-right:var(--gut)}
+.fmt{margin-top:1.4rem;display:grid;gap:clamp(.75rem,1.5vw,1.2rem)}
+.fmt li{
+  padding:clamp(1.05rem,2vw,1.6rem) var(--gut) clamp(1.05rem,2vw,1.6rem) clamp(1.2rem,2.6vw,2.2rem);
+  font-weight:700;text-transform:uppercase;
+  font-size:clamp(1.02rem,1.95vw,1.6rem);line-height:1.15;
+  /* a barra é #4D3502 chapada; o dourado na ponta é o feixe de luz do fundo somando por baixo */
+  background:linear-gradient(90deg,#4D3502 0%,#4D3502 46%,#664A03 74%,#966D03 100%);
+}
+
+@media (min-width:700px){
+  .tira{grid-template-columns:repeat(4,1fr)}
+  .pal__grid{display:grid;grid-template-columns:minmax(0,41%) minmax(0,1fr);align-items:center}
+  .pal__foto{height:auto;max-height:none;align-self:stretch;min-height:clamp(34rem,62vw,44rem)}
+  .pal__foto img{position:absolute;inset:0;object-position:40% 0;-webkit-mask-image:linear-gradient(90deg,#000 66%,transparent 100%);mask-image:linear-gradient(90deg,#000 66%,transparent 100%)}
+  .pal__foto::after{height:22%}
+  .pal__fmt{margin-top:0;padding:var(--band) 0 var(--band) clamp(.5rem,1.5vw,1.5rem)}
+}
+
+/* ============================================================
+   6 · TEMAS
+   ============================================================ */
+.temas{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(180deg,#1F1913 0%,#171001 22%,#0B0802 62%,#060503 100%);
+}
+.temas__topo{position:relative;height:clamp(12rem,39.3vw,40rem);overflow:hidden}
+.temas__topo img{width:100%;height:100%;object-fit:cover;object-position:46% 40%}
+.temas__topo::before{content:"";position:absolute;inset:0 0 auto 0;height:22%;background:linear-gradient(180deg,var(--ambar),rgba(28,20,1,0));z-index:1}
+.temas__topo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,25,19,0) 55%,#1F1913 100%)}
+.temas__foto{display:none}
+.cards{position:relative;display:grid;gap:clamp(.9rem,1.9vw,1.6rem);padding:0 var(--gut) var(--band);margin-top:.25rem}
+.card{
+  display:flex;flex-direction:column;
+  padding:clamp(1.4rem,2.5vw,2.1rem) clamp(1.4rem,2.7vw,2.3rem);
+  /* no kit a cor efetiva do card é #997F65 — branco sobre ela dá 3,76:1 e reprova no contraste AA.
+     #89725A é o mesmo bege ~7% mais escuro: 4,55:1. É a única cor da página que não é a medida no PDF. */
+  background:#89725A;
+  border:1px solid rgba(255,255,255,.85);  /* fio quase branco, cantos retos */
+}
+.card h3{font-size:clamp(1.2rem,2.15vw,1.75rem);font-weight:700;text-transform:uppercase;line-height:1.12}
+.card p{margin-top:.65rem;font-weight:400;font-size:clamp(1.02rem,1.55vw,1.25rem);line-height:1.38;max-width:37rem}
+.card__cta{
+  margin-top:1.1rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.55em;min-height:44px;
+  font-weight:800;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;
+  border-bottom:1.5px solid rgba(255,255,255,.8);transition:gap .2s ease,border-color .2s ease;
+}
+.card__cta svg{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2.4}
+.card__cta:hover{gap:.95em;border-color:#fff}
+
+@media (min-width:900px){
+  .temas__grid{display:grid;grid-template-columns:minmax(0,36%) minmax(0,1fr);align-items:start}
+  .temas__foto{display:block;position:relative;margin-top:clamp(-7rem,-9vw,-3rem)}
+  .temas__foto img{
+    width:100%;height:auto;opacity:.85;   /* é frame de vídeo: entra no tamanho natural, nunca esticada */
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 60%,transparent 96%),linear-gradient(90deg,#000 58%,transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(180deg,transparent 0,#000 14%,#000 60%,transparent 96%),linear-gradient(90deg,#000 58%,transparent 100%);
+    mask-composite:intersect;
+  }
+  .cards{padding:0 var(--edge) var(--band) 0;margin-top:clamp(-3rem,-3.5vw,-1.5rem)}   /* no desktop o 1º card morde a base do telão, como no kit */
+}
+
+/* ============================================================
+   7 · RESULTADOS PARA A SUA ORGANIZAÇÃO
+   ============================================================ */
+.res{
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:var(--band) 0;
+  /* holofote de estúdio: no kit o centro fica ABAIXO do título, na altura da lista (x 34%, y 20% da página).
+     Aqui ele é um tom mais contido que o do PDF (#978C83 no lugar de #AA9F96): com o original, o amarelo do
+     título e o branco da lista caíam abaixo de 3:1 de contraste. */
+  background:
+    radial-gradient(60% 25% at 31% 30%, #978C83 0%, rgba(122,112,103,.7) 45%, rgba(101,91,83,0) 100%),
+    linear-gradient(180deg,#5E554D 0%,#4E463E 58%,#3C362F 100%);
+}
+.res__ttl{position:relative;z-index:0;text-transform:uppercase;line-height:.92}
+.res__big{display:block;font-weight:800;font-size:clamp(3rem,14.4vw,13.6rem);letter-spacing:-.03em;margin-left:-.04em}
+.res__sub{display:block;margin-top:.1em;font-weight:500;font-size:clamp(1.2rem,4.7vw,4.45rem);line-height:1;letter-spacing:-.004em}   /* termina antes do ombro, como no kit */
+/* celular: o subtítulo quebra em duas linhas para não passar por baixo do ombro; a figura sobe a altura do h2 inteiro */
+.res__sub{max-width:52%}
+.res__foto{position:relative;z-index:1;display:block;width:min(56%,16rem);margin:calc(-13.6vw - 3.1rem) -.25rem 0 auto}
+.res__lista{position:relative;z-index:2;margin-top:.75rem}
+.ganhos{display:grid;gap:clamp(.6rem,1.15vw,1rem);font-weight:700;text-transform:uppercase;font-size:clamp(1.17rem,1.85vw,1.5rem);line-height:1.2}   /* nunca abaixo de 18,7px bold: fica sobre o holofote */
+.ganhos li{position:relative;padding-left:1em}
+.ganhos li::before{content:"";position:absolute;left:.08em;top:.46em;width:.32em;height:.32em;border-radius:50%;background:currentColor}
+.res .aspas{margin:clamp(2.4rem,4.4vw,3.6rem) 0 0 1.4rem;max-width:41rem}
+.res__cta{margin-top:2.4rem}
+.clientes{position:relative;z-index:2;margin-top:clamp(3.5rem,7vw,6rem)}
+.clientes__ttl{text-align:center;font-weight:600;text-transform:uppercase;font-size:clamp(1.2rem,2.75vw,2.6rem);line-height:1.1}
+.logos{margin-top:clamp(1.5rem,3vw,2.6rem);overflow:hidden}
+.logos ul{display:grid;grid-template-columns:repeat(3,1fr);margin:0 -1px -1px 0}   /* só os fios internos aparecem */
+.logos li{display:grid;place-items:center;aspect-ratio:212.8 / 144.5;border-right:1px solid rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.4)}
+.logos img{width:var(--w,60%);height:auto;max-height:76%;object-fit:contain}
+
+@media (min-width:640px){
+  .logos ul{grid-template-columns:repeat(6,1fr)}
+}
+@media (min-width:600px){   /* duas colunas cedo: empilhado, a figura deixava um vazio grande à esquerda no tablet */
+  .res__sub{max-width:none}
+  .res__topo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,35%);column-gap:clamp(1rem,3vw,3rem);align-items:start}
+  .res__ttl{grid-column:1 / -1;grid-row:1}
+  .res__lista{grid-column:1;grid-row:2;margin-top:clamp(1.8rem,3.2vw,3rem)}
+  /* a cabeça fica NA FRENTE do título, em cima do segundo "O", como no kit */
+  .res__foto{grid-column:2;grid-row:1 / span 2;width:100%;margin:clamp(-3.5rem,-3.6vw,-1.5rem) 0 0;justify-self:end}
+}
+
+/* ============================================================
+   8 · LEVE GUSTAVO SAMPAIO PARA A SUA EMPRESA
+   ============================================================ */
+.leve{
+  position:relative;isolation:isolate;overflow:hidden;
+  display:flex;align-items:flex-end;min-height:100vh;min-height:100svh;
+  padding:min(96vw,62vh) var(--gut) var(--band);
+  background:var(--petroleo);
+}
+.leve__fig{position:absolute;inset:0 0 auto 0;height:min(128vw,82vh);z-index:-2}
+.leve__fig img{width:100%;height:100%;object-fit:cover;object-position:48% 0}
+.leve::after{content:"";position:absolute;inset:0 0 auto 0;height:min(128vw,82vh);z-index:-1;background:linear-gradient(180deg,rgba(13,24,24,.5) 0%,rgba(13,24,24,0) 18%,rgba(13,24,24,0) 46%,rgba(13,24,24,.9) 82%,var(--petroleo) 100%)}
+.leve__txt{width:100%;max-width:calc(var(--wrap) - 2 * var(--gut));margin:0 auto}
+.leve__ttl{text-transform:uppercase;line-height:.95;letter-spacing:-.012em}
+.leve__ttl > span{display:block}
+.leve__a,.leve__b{font-weight:300}
+.leve__a{font-size:clamp(1.6rem,3.7vw,3.6rem);line-height:1.15}
+.leve__b{font-size:clamp(1.5rem,3.75vw,3.7rem);line-height:1.2;margin-top:.1em;letter-spacing:-.004em}
+.leve__ttl .nome__g{font-size:clamp(3.2rem,15.2vw,5.6rem)}
+.leve__ttl .nome__s{font-size:clamp(2.67rem,12.7vw,4.68rem)}
+.leve__p{margin-top:1.7rem;max-width:31rem;line-height:1.4}
+.leve__rot{margin-top:clamp(2.2rem,4vw,3.4rem);font-size:clamp(1.15rem,1.85vw,1.55rem);font-weight:800;text-transform:uppercase}
+.contatos{margin-top:.7rem;display:grid;gap:.1rem;font-size:clamp(1.2rem,2.05vw,1.7rem)}
+.contatos a{display:inline-flex;align-items:center;gap:.65em;min-height:48px;transition:color .2s}
+.contatos a:hover{color:var(--gold)}
+.contatos svg{width:1.25em;height:1.25em;flex:none;fill:currentColor}
+.leve__acoes{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem 2.5rem}
+.qr{display:none}
+
+@media (min-width:760px){
+  .leve{align-items:center;padding:var(--band) var(--gut)}
+  .leve__fig{inset:0 0 0 auto;height:auto;width:min(60vw,1060px)}
+  .leve__fig img{object-position:50% 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40%);mask-image:linear-gradient(90deg,transparent 0,#000 40%)}
+  .leve::after{height:auto;inset:0;background:linear-gradient(180deg,rgba(13,24,24,.25) 0%,rgba(13,24,24,0) 18%,rgba(13,24,24,0) 80%,rgba(13,24,24,.92) 100%)}
+  .leve__txt > *{max-width:min(46vw,39rem)}
+  .leve__ttl .nome__g{font-size:clamp(4.2rem,9.3vw,9.5rem)}
+  .leve__ttl .nome__s{font-size:clamp(3.5rem,7.77vw,7.93rem)}
+}
+@media (min-width:1000px) and (hover:hover){
+  .qr{display:flex;align-items:center;gap:1rem}
+  .qr img{width:112px;height:112px;border-radius:10px}
+  .qr figcaption{max-width:12rem;font-size:.92rem;font-weight:400;line-height:1.35}
+}
+
+/* ============================================================
+   RODAPÉ + WHATSAPP FLUTUANTE
+   ============================================================ */
+.ft{background:#070D0D;border-top:1px solid rgba(235,203,108,.18);padding:2.5rem 0 6.5rem}
+.ft__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem}
+.ft__legal{margin-top:.4rem;font-size:.95rem;font-weight:400;color:rgba(255,255,255,.72)}
+.ft__legal a{display:inline-block;padding:.8rem 0;text-decoration:underline;text-underline-offset:3px}   /* alvo de toque de 44px */
+.ft__legal a:hover{color:var(--gold)}
+.social{display:flex;gap:.6rem}
+.social a{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.28);border-radius:12px;transition:border-color .2s,color .2s}
+.social a:hover{border-color:var(--gold);color:var(--gold)}
+.social svg{width:20px;height:20px;fill:currentColor}
+
 .wa{
-  position:fixed;right:clamp(1rem,3vw,1.75rem);bottom:clamp(1rem,3vw,1.75rem);
-  z-index:55;width:56px;height:56px;border-radius:50%;
-  background:var(--wa);color:#04240f;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 12px 30px -10px rgba(37,211,102,.6);
-  transition:transform .2s ease;
+  position:fixed;right:clamp(1rem,2.5vw,1.75rem);bottom:clamp(1rem,2.5vw,1.75rem);z-index:40;
+  width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+  background:var(--wa);color:#F0F7F2;box-shadow:0 10px 28px -8px rgba(0,0,0,.75);
+  transition:transform .2s ease, background-color .2s ease;
 }
-.wa:hover{transform:scale(1.06)}
-.wa svg{width:27px;height:27px;fill:currentColor}
-.wa::before{
-  content:"";position:absolute;inset:0;border-radius:50%;
-  border:1.5px solid var(--wa);animation:pulse 2.6s ease-out infinite;
-}
-@keyframes pulse{
-  0%{transform:scale(1);opacity:.7}
-  70%{transform:scale(1.55);opacity:0}
-  100%{opacity:0}
-}
+.wa:hover{transform:scale(1.06);background:var(--wa-hover)}
+.wa svg{width:30px;height:30px;fill:currentColor}
 
 /* ============================================================
-   REVEAL
+   MOVIMENTO — cada bloco entra uma vez e sobe pouco. Sem JS, nada some.
    ============================================================ */
-.js .reveal{opacity:0;transform:translateY(12px)}
-.js .reveal.is-in{
-  opacity:1;transform:none;
-  transition:opacity .6s cubic-bezier(.2,.6,.3,1) var(--d,0s), transform .6s cubic-bezier(.2,.6,.3,1) var(--d,0s);
-}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0s), transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js .reveal.is-in{opacity:1;transform:none}
+
+@keyframes sobe{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes surge{from{opacity:0;transform:scale(1.035)}to{opacity:1;transform:none}}
+.capa__fig{animation:surge 1.6s cubic-bezier(.2,.7,.2,1) both}
+.capa__txt > *{animation:sobe .9s cubic-bezier(.2,.7,.2,1) both}
+.capa__txt > :nth-child(1){animation-delay:.15s}
+.capa__txt > :nth-child(2){animation-delay:.42s}
+.capa__txt > :nth-child(3){animation-delay:.54s}
+.capa__txt > :nth-child(4){animation-delay:.66s}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+@media print{
+  .hdr,.sheet,.wa,.skip{display:none}
   .js .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============ CABEÇALHO ============ -->
 <header class="hdr" id="hdr">
   <div class="wrap hdr__in">
-    <a class="mark" href="#topo" aria-label="Gustavo Sampaio — início">Gustavo Sampaio<span>.</span></a>
+    <a class="marca" href="#topo" aria-label="Gustavo Sampaio — início da página"><b>Gustavo</b>&nbsp;Sampaio</a>
 
     <nav class="nav" aria-label="Seções da página">
-      <a href="#empresas">Empresas</a>
-      <a href="#temas">Temas</a>
-      <a href="#formatos">Formatos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#perguntas">Perguntas</a>
+      <a href="#quem-e">Quem é</a>
+      <a href="#experiencia">A experiência</a>
+      <a href="#everest">Everest</a>
+      <a href="#palestras">Palestras</a>
+      <a href="#resultados">Resultados</a>
     </nav>
 
-    <a class="btn btn--wa btn--sm hdr__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20falar%20sobre%20uma%20palestra%20com%20o%20Gustavo%20Sampaio." target="_blank" rel="noopener">
-      Contratar palestra
-    </a>
+    <a class="btn btn--line btn--sm hdr__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicite uma proposta</a>
 
-    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="sheet">
-      <i></i><i></i><i></i>
-    </button>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Abrir menu"><span></span></button>
   </div>
 </header>
 
-<div class="sheet" id="sheet" data-open="false">
-  <a href="#empresas">Empresas</a>
+<nav class="sheet" id="sheet" aria-label="Menu">
+  <a href="#quem-e">Quem é</a>
+  <a href="#experiencia">A experiência</a>
+  <a href="#everest">Do Everest aos negócios</a>
+  <a href="#palestras">Palestras e formatos</a>
   <a href="#temas">Temas</a>
-  <a href="#formatos">Formatos</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#trajetoria">Trajetória</a>
-  <a href="#perguntas">Perguntas</a>
-  <a class="btn btn--wa" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20falar%20sobre%20uma%20palestra%20com%20o%20Gustavo%20Sampaio." target="_blank" rel="noopener">Contratar palestra</a>
-</div>
+  <a href="#resultados">Resultados</a>
+  <a class="btn btn--gold" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicite uma proposta</a>
+</nav>
 
-<main>
+<main id="conteudo">
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="topo">
+<!-- ============ 1 · CAPA (pág. 1 do kit) ============ -->
+<section class="capa" id="topo" aria-labelledby="capa-h">
+  <picture class="capa__fig">
+    <source media="(max-width: 759px)" srcset="images/kit/hero-full.webp" width="1400" height="2000">
+    <img src="images/kit/hero-figura.webp" width="1391" height="2600" alt="Gustavo Sampaio no palco, sorrindo, com o microfone na mão" fetchpriority="high" decoding="async">
+  </picture>
+
+  <div class="capa__txt">
+    <h1 class="nome" id="capa-h"><span class="nome__g gold">Gustavo</span><span class="nome__s goldl">Sampaio</span></h1>
+    <a class="arroba" href="https://www.instagram.com/eusougustavosampaio/" target="_blank" rel="noopener" aria-label="Instagram: @eusougustavosampaio">@eusougustavosampaio</a>
+    <p class="capa__lead">Palestras para convenções de vendas, encontros de liderança, eventos empresariais, treinamentos de equipes e encontros com clientes e parceiros.</p>
+    <div class="capa__cta">
+      <a class="btn btn--gold" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20palestra%20com%20o%20Gustavo%20Sampaio%20para%20o%20meu%20evento." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
+        Solicite uma proposta
+      </a>
+      <a class="lnk" href="#palestras">Ver as palestras
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · QUEM É (pág. 2) ============ -->
+<section class="quem" id="quem-e" aria-labelledby="quem-h">
+  <div class="quem__foto">
+    <img src="images/kit/retrato.webp" srcset="images/kit/retrato-800.webp 800w, images/kit/retrato.webp 1000w" sizes="(min-width: 700px) 50vw, 100vw" width="1000" height="2000" alt="Retrato de Gustavo Sampaio, de blazer escuro e camisa branca, sorrindo" loading="lazy" decoding="async">
+  </div>
+
+  <div class="quem__txt">
+    <h2 class="ttl reveal" id="quem-h"><span class="ttl__h bronze">Quem é</span><span class="ttl__l bronzel">Gustavo Sampaio</span></h2>
+
+    <p class="quem__abre reveal">Sou <strong>empresário, palestrante</strong> e <strong>estrategista.</strong></p>
+
+    <div class="quem__bio just reveal">
+      <p>Gustavo Sampaio construiu sua base de liderança e alta performance ao longo de seis anos no Banco do Brasil, após ser aprovado em concurso público.</p>
+      <p>Em 2018, expandiu sua atuação nos negócios ao se tornar sócio de Paulo Vieira na franquia Febracis Goiânia, onde atuou como diretor até 2026.</p>
+      <p>Atualmente lidera pessoas, projetos e processos voltados ao desenvolvimento pessoal e corporativo.</p>
+      <p>Essa busca por superação também se reflete em sua paixão por desafios extremos de alta performance e inteligência emocional, como travessias no Deserto do Saara e Atacama, nos Lençóis Maranhenses e a subida ao acampamento base do Everest.</p>
+      <p>Sua trajetória prática moldou uma convicção central: nenhuma empresa cresce de forma consistente sem desenvolver as pessoas que sustentam seus resultados.</p>
+      <p>Mais do que transmitir conhecimento, seu propósito é provocar movimento: despertando indivíduos, fortalecendo lideranças e transformando intenção em ação.</p>
+    </div>
+
+    <h3 class="quem__exp reveal"><span class="bronze">Experiência construída na prática!</span></h3>
+    <ul class="nums reveal">
+      <li><strong>+ 3.000</strong> palestras</li>
+      <li><strong>+ 400 mil</strong> pessoas treinadas</li>
+      <li><strong>+ 3.600</strong> horas de mentoria individual</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 3 · NÃO É APENAS UMA PALESTRA (pág. 3) ============ -->
+<section class="exp" id="experiencia" aria-labelledby="exp-h">
   <div class="wrap">
-    <div class="hero__grid">
+    <h2 class="ttl reveal" id="exp-h"><span class="ttl__l">Não é apenas</span><span class="ttl__h goldl">uma palestra</span></h2>
+  </div>
+
+  <div class="exp__foto">
+    <img src="images/kit/palco.webp" srcset="images/kit/palco-800.webp 800w, images/kit/palco.webp 1400w" sizes="(min-width: 760px) 60vw, 140vw" width="1400" height="2000" alt="Gustavo Sampaio de pé no palco, gesticulando enquanto fala ao microfone" loading="lazy" decoding="async">
+  </div>
+
+  <div class="exp__txt">
+    <div class="just reveal">
+      <p class="exp__abre">É <strong>uma experiência criada para provocar reflexão</strong>, gerar movimento <strong>e transformar conhecimento em atitude</strong>.</p>
+      <p>Cada palestra é adaptada ao momento da empresa, ao perfil do público e aos objetivos do evento.</p>
+      <p>Conteúdo, emoção e experiências reais se conectam para que a mensagem não termine quando o evento acaba.</p>
+    </div>
+
+    <h3 class="exp__sub reveal">O público é conduzido a:</h3>
+    <ul class="verbos">
+      <li class="reveal"><strong><span class="gold">Pensar</span></strong><span>de uma nova maneira.</span></li>
+      <li class="reveal" style="--d:.06s"><strong><span class="gold">Assumir</span></strong><span>responsabilidade pelos próprios resultados.</span></li>
+      <li class="reveal" style="--d:.12s"><strong><span class="gold">Decidir</span></strong><span>com mais clareza.</span></li>
+      <li class="reveal" style="--d:.18s"><strong><span class="gold">Fortalecer</span></strong><span>a comunicação e o trabalho em equipe.</span></li>
+      <li class="reveal" style="--d:.24s"><strong><span class="gold">Transformar</span></strong><span>desafios em oportunidades de crescimento.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 4 · DO EVEREST AOS NEGÓCIOS (pág. 4) ============ -->
+<section class="everest" id="everest" aria-labelledby="everest-h">
+  <div class="everest__topo">
+    <img src="images/kit/everest-basecamp.webp" width="2000" height="694" alt="Gustavo Sampaio ajoelhado, de braços abertos, sob a pedra pintada com “Everest Base Camp 5364”" loading="lazy" decoding="async">
+  </div>
+
+  <div class="wrap everest__corpo">
+    <h2 class="ttl reveal" id="everest-h"><span class="ttl__l everest-a">Do <b>Everest</b> aos</span><span class="ttl__h ttl__xl everest-b">Negócios</span></h2>
+
+    <div class="everest__grid">
       <div>
-        <span class="eyebrow reveal">Palestrante · Conselheiro · Goiânia, GO</span>
-        <h1 class="h-xl hero__title reveal" style="--d:.06s">Ninguém escala grandes montanhas <em>no improviso.</em></h1>
-        <p class="lead reveal" style="--d:.12s">
-          Gustavo Sampaio leva ao palco o que aprendeu em mais de 3.300 horas de mentoria com donos, sucessores e lideranças-chave: liderança, inteligência emocional e sucessão tratadas como método. O público sai com decisão tomada — não com frase de efeito.
-        </p>
-
-        <div class="hero__actions reveal" style="--d:.18s">
-          <a class="btn btn--wa" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Gostaria%20de%20verificar%20disponibilidade%20de%20data%20para%20o%20meu%20evento." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
-            Falar com o comercial
-          </a>
-          <a class="btn btn--ghost" href="#temas">Ver os temas</a>
+        <div class="everest__txt just reveal">
+          <p>Foram nove dias de caminhada até alcançar o Acampamento Base do Everest, a aproximadamente 5.300 metros de altitude.</p>
+          <p>Durante essa jornada, enfrentei o frio, o cansaço, a altitude e os meus próprios limites. Entendi que grandes conquistas não dependem apenas de motivação.</p>
+          <p>Elas exigem direção, preparação, disciplina, inteligência emocional e determinação para continuar avançando.</p>
+          <p>Hoje, transformo os aprendizados dessa experiência em uma palestra sobre superação, liderança, trabalho em equipe e construção de resultados.</p>
         </div>
 
-        <p class="hero__note reveal" style="--d:.24s">Presencial e online · Eventos em todo o Brasil</p>
+        <h3 class="everest__sub reveal">Principais aprendizados:</h3>
+        <ul class="aprend reveal">
+          <li>Clareza de objetivo</li>
+          <li>Preparação para os desafios</li>
+          <li>Controle emocional diante da pressão</li>
+          <li>Disciplina para continuar</li>
+          <li>Força do trabalho em equipe</li>
+        </ul>
+
+        <a class="btn btn--line everest__cta reveal" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20na%20palestra%20%E2%80%9CDo%20Everest%20aos%20Neg%C3%B3cios%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Do Everest aos Negócios">Quero esta palestra</a>
       </div>
 
-      <div class="shot reveal" style="--d:.1s">
-        <div class="shot__img">
-          <img src="images/gustavo-terno-escuro.jpg" width="683" height="1024" alt="Gustavo Sampaio, de blazer escuro e camisa branca, em retrato de estúdio" fetchpriority="high">
-        </div>
+      <div class="everest__lado reveal">
+        <img class="everest__pico" src="images/kit/everest-pico.webp" width="840" height="756" alt="" loading="lazy" decoding="async">
+        <blockquote class="aspas">
+          <span class="aspas__moldura" aria-hidden="true"></span>
+          <p>A montanha não ficou menor. Eu precisei me tornar maior do que o desafio.</p>
+        </blockquote>
       </div>
     </div>
+  </div>
 
-    <div class="figures reveal">
-      <div class="figure">
-        <div class="figure__n">+15.000</div>
-        <div class="figure__l">Alunos formados na Escola de Negócios Febracis</div>
-      </div>
-      <div class="figure">
-        <div class="figure__n">+3.300h</div>
-        <div class="figure__l">De coaching e mentoria individual registradas</div>
-      </div>
-      <div class="figure">
-        <div class="figure__n">+500</div>
-        <div class="figure__l">Negócios acompanhados como mentor</div>
-      </div>
-      <div class="figure">
-        <div class="figure__n">+20.000h</div>
-        <div class="figure__l">Dedicadas ao desenvolvimento de pessoas</div>
-      </div>
+  <div class="everest__base">
+    <img src="images/kit/everest-montanha.webp" width="2000" height="483" alt="" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- ============ 5 · PALESTRAS PARA DIFERENTES DESAFIOS (pág. 5) ============ -->
+<section class="pal" id="palestras" aria-labelledby="pal-h">
+  <div class="wrap pal__head">
+    <h2 class="pal__ttl reveal" id="pal-h"><b>Palestras</b> <i>para</i><br><i>diferentes</i> <b>desafios</b></h2>
+    <p class="pal__script reveal" style="--d:.1s">Liderança que gera movimento</p>
+  </div>
+
+  <div class="tira reveal" role="img" aria-label="Gustavo Sampaio em quatro palcos diferentes">
+    <img src="images/kit/tira-3.webp" width="410" height="386" alt="" loading="lazy" decoding="async">
+    <img src="images/kit/tira-4.webp" width="410" height="386" alt="" loading="lazy" decoding="async">
+    <img src="images/kit/tira-5.webp" width="410" height="386" alt="" loading="lazy" decoding="async">
+    <img src="images/kit/tira-6.webp" width="379" height="386" alt="" loading="lazy" decoding="async">
+  </div>
+
+  <div class="pal__grid">
+    <div class="pal__foto">
+      <img src="images/kit/sorriso.webp" srcset="images/kit/sorriso-800.webp 800w, images/kit/sorriso.webp 1016w" sizes="(min-width: 700px) 41vw, 100vw" width="1016" height="2000" alt="Gustavo Sampaio rindo, com o microfone na mão, durante uma palestra" loading="lazy" decoding="async">
+    </div>
+
+    <div class="pal__fmt">
+      <h3 class="fmt__ttl reveal">Formatos disponíveis:</h3>
+      <ul class="fmt">
+        <li class="reveal">Palestras presenciais e online</li>
+        <li class="reveal" style="--d:.06s">Workshops corporativos</li>
+        <li class="reveal" style="--d:.12s">Treinamentos de 4h, 8h ou 16h</li>
+        <li class="reveal" style="--d:.18s">Programas para empresas</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ============ EMPRESAS ATENDIDAS ============ -->
-<section class="proof" id="empresas">
+<!-- ============ 6 · TEMAS (pág. 6) ============ -->
+<section class="temas" id="temas" aria-labelledby="temas-h">
+  <h2 class="sr" id="temas-h">Temas de palestra</h2>
+
+  <div class="temas__topo">
+    <img src="images/kit/telao.webp" width="2000" height="786" alt="Telão do evento Criação de Riqueza com a foto de Gustavo Sampaio e a frase “Multiplicar riquezas é multiplicar destinos — o lucro de hoje, a herança de amanhã.”" loading="lazy" decoding="async">
+  </div>
+
+  <div class="temas__grid">
+    <div class="temas__foto">
+      <img src="images/kit/caminhando.webp" width="878" height="1452" alt="Gustavo Sampaio de blazer azul, caminhando pelo palco enquanto fala com a plateia" loading="lazy" decoding="async">
+    </div>
+
+    <ul class="cards">
+      <li class="card reveal">
+        <h3>Pessoas que movem resultados</h3>
+        <p>Uma experiência sobre comportamento, atitude, responsabilidade e trabalho em equipe.</p>
+        <a class="card__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20no%20tema%20%E2%80%9CPessoas%20que%20movem%20resultados%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Pessoas que movem resultados">Quero esta palestra <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </li>
+      <li class="card reveal">
+        <h3>Inteligência emocional sob pressão</h3>
+        <p>Como lidar com desafios, conflitos, mudanças e decisões sem perder o equilíbrio e a direção.</p>
+        <a class="card__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20no%20tema%20%E2%80%9CIntelig%C3%AAncia%20emocional%20sob%20press%C3%A3o%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Inteligência emocional sob pressão">Quero esta palestra <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </li>
+      <li class="card reveal">
+        <h3>Produtividade com propósito</h3>
+        <p>Como transformar objetivos em prioridades, prioridades em ações e ações em resultados.</p>
+        <a class="card__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20no%20tema%20%E2%80%9CProdutividade%20com%20prop%C3%B3sito%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Produtividade com propósito">Quero esta palestra <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </li>
+      <li class="card reveal">
+        <h3>Conexões que geram oportunidades</h3>
+        <p>A importância do networking, da comunicação e da construção de relacionamentos profissionais.</p>
+        <a class="card__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20no%20tema%20%E2%80%9CConex%C3%B5es%20que%20geram%20oportunidades%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Conexões que geram oportunidades">Quero esta palestra <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </li>
+      <li class="card reveal">
+        <h3>Mentalidade financeira</h3>
+        <p>Como decisões, comportamentos e inteligência financeira influenciam a vida e os negócios.</p>
+        <a class="card__cta" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Tenho%20interesse%20no%20tema%20%E2%80%9CMentalidade%20financeira%E2%80%9D%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener" aria-label="Quero esta palestra: Mentalidade financeira">Quero esta palestra <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 7 · RESULTADOS (pág. 7) ============ -->
+<section class="res" id="resultados" aria-labelledby="res-h">
   <div class="wrap">
-    <div class="proof__head reveal">
-      <div>
-        <span class="eyebrow">Empresas atendidas</span>
-        <h2 class="h-md">Quem já contratou.</h2>
-      </div>
-      <p>Indústria, agronegócio, varejo, serviços e cooperativas — empresas que já levaram o Gustavo para o palco ou para dentro de casa.</p>
-    </div>
+    <div class="res__topo">
+      <h2 class="res__ttl" id="res-h"><span class="res__big"><span class="sunset">Resultados</span></span><span class="res__sub">para a sua organização</span></h2>
 
-    <div class="logos reveal">
-      <div class="logo" style="--lh:30px"><img src="images/logos/tramontina.svg" width="300" height="45" alt="Tramontina" loading="lazy"></div>
-      <div class="logo" style="--lh:32px"><img src="images/logos/doterra.svg" width="300" height="55" alt="doTERRA" loading="lazy"></div>
-      <div class="logo" style="--lh:34px"><img src="images/logos/gav-resorts.svg" width="235" height="58" alt="GAV Resorts" loading="lazy"></div>
-      <div class="logo" style="--lh:32px"><img src="images/logos/ocb.svg" width="300" height="64" alt="Sistema OCB" loading="lazy"></div>
+      <img class="res__foto" src="images/kit/banco.webp" width="677" height="1900" alt="Gustavo Sampaio sentado em um banco alto, de blazer cinza claro e camiseta branca, sorrindo" loading="lazy" decoding="async">
 
-      <div class="logo" style="--lh:46px"><img src="images/logos/grupo-cereal-mono.png" width="600" height="329" alt="Grupo Cereal" loading="lazy"></div>
-      <div class="logo" style="--lh:56px"><img src="images/logos/terram-mono.png" width="1215" height="1270" alt="Terram" loading="lazy"></div>
-      <div class="logo" style="--lh:40px"><img src="images/logos/lider-rolamentos.png" width="807" height="309" alt="Líder Rolamentos" loading="lazy"></div>
-      <div class="logo" style="--lh:36px"><img src="images/logos/marambaia-sementes.svg" width="900" height="245" alt="Marambaia Sementes" loading="lazy"></div>
+      <div class="res__lista">
+        <ul class="ganhos reveal">
+          <li>Lideranças mais preparadas</li>
+          <li>Equipes mais engajadas</li>
+          <li>Comunicação mais clara</li>
+          <li>Mais produtividade e execução</li>
+          <li>Inteligência emocional diante dos desafios</li>
+          <li>Maior alinhamento com metas e objetivos</li>
+          <li>Fortalecimento da cultura de resultados</li>
+        </ul>
 
-      <div class="logo" style="--lh:46px"><img src="images/logos/agro-maggioni.png" width="400" height="209" alt="Agro Maggioni" loading="lazy"></div>
-      <div class="logo" style="--lh:46px"><img src="images/logos/urbs.png" width="147" height="80" alt="Urbs Imobiliária" loading="lazy"></div>
-      <div class="logo" style="--lh:30px"><img src="images/logos/pinauto-white.png" width="245" height="50" alt="Pinauto" loading="lazy"></div>
-      <div class="logo" style="--lh:34px"><img src="images/logos/rayquimica.png" width="350" height="90" alt="Rayquímica" loading="lazy"></div>
+        <blockquote class="aspas aspas--larga reveal">
+          <span class="aspas__moldura" aria-hidden="true"></span>
+          <p>Quando pessoas e objetivos caminham na mesma direção, os resultados deixam de depender do acaso.</p>
+        </blockquote>
 
-      <div class="logo" style="--lh:52px"><img src="images/logos/roma-joias.png" width="1372" height="1049" alt="Roma Joias" loading="lazy"></div>
-      <div class="logo" style="--lh:30px"><img src="images/logos/kaza-capital.webp" width="290" height="48" alt="Kaza Capital" loading="lazy"></div>
-      <div class="logo" style="--lh:46px"><img src="images/logos/danglar.svg" width="289" height="150" alt="Danglar" loading="lazy"></div>
-      <div class="logo" style="--lh:54px"><img src="images/logos/escola-kingdom.png" width="750" height="635" alt="Kingdom Learning" loading="lazy"></div>
-    </div>
-
-    <div class="stages reveal">
-      <span class="stages__label">Palcos e eventos</span>
-      <span class="stage">Criação de Riqueza — São Paulo</span>
-      <span class="stage">OAB</span>
-      <span class="stage">UpSummit</span>
-      <span class="stage">Rota Empreendedora</span>
-      <span class="stage">Arnold Nutrition — 10 anos</span>
-      <span class="stage">Método CIS</span>
-      <span class="stage">Viva Sua Real Identidade — 2.000 pessoas</span>
-      <span class="stage">Febracis Goiânia</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MANIFESTO ============ -->
-<section class="band">
-  <div class="wrap manifesto">
-    <div class="reveal">
-      <span class="eyebrow">O problema</span>
-      <h2 class="h-lg">O improviso não aparece no palco. Aparece três meses depois.</h2>
-    </div>
-    <div class="reveal" style="--d:.08s">
-      <p>Toda convenção termina com a plateia de pé. A pergunta que importa é o que sobra na segunda-feira — quando o dono continua sendo o gargalo de toda decisão, o sucessor continua sem autonomia real e o time continua esperando ordem para agir.</p>
-      <p>É esse ponto que o Gustavo trabalha há mais de oito anos à frente da Febracis Goiânia: reduzir centralização, preparar quem vem depois e transformar comportamento em resultado que aparece no número. A palestra não substitui esse processo — ela abre a conversa dentro da empresa e dá o primeiro passo concreto.</p>
-      <blockquote class="pull">
-        Empresas não crescem acima da maturidade emocional de quem as lidera.
-        <cite>Gustavo Sampaio</cite>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TEMAS ============ -->
-<section class="band band--ridge" id="temas">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Temas</span>
-      <h2 class="h-lg">Cinco palestras prontas — e uma sob medida.</h2>
-      <p>Cada tema é ajustado em recorte, profundidade e duração de acordo com o público e o objetivo do seu evento.</p>
-    </div>
-
-    <div class="themes">
-      <article class="theme reveal">
-        <span class="theme__k">Inteligência emocional</span>
-        <h3>Inteligência Emocional para Alta Performance</h3>
-        <p>Como transformar autoconhecimento em decisão melhor sob pressão — no dia a dia da liderança e do negócio.</p>
-      </article>
-      <article class="theme reveal" style="--d:.05s">
-        <span class="theme__k">Execução</span>
-        <h3>O Poder da Ação</h3>
-        <p>O que trava a execução de um time que sabe o que precisa fazer e mesmo assim não faz. Ferramentas para destravar.</p>
-      </article>
-      <article class="theme reveal" style="--d:.1s">
-        <span class="theme__k">Liderança</span>
-        <h3>Liderança que Forma Líderes</h3>
-        <p>Como desenvolver sucessores e times de alta performance sem centralizar toda decisão em uma pessoa.</p>
-      </article>
-      <article class="theme reveal" style="--d:.15s">
-        <span class="theme__k">Sucessão</span>
-        <h3>Sucessão em Empresas Familiares</h3>
-        <p>Preparar a próxima geração sem sacrificar governança, relação familiar ou resultado do negócio.</p>
-      </article>
-      <article class="theme reveal" style="--d:.2s">
-        <span class="theme__k">Movimento</span>
-        <h3>Homens de Honra</h3>
-        <p>Conversa direta sobre posicionamento, disciplina e liderança — dentro de casa e dentro do negócio.</p>
-      </article>
-      <article class="theme reveal" style="--d:.25s">
-        <span class="theme__k">Sob medida</span>
-        <h3>Tema construído com você</h3>
-        <p>Conte o contexto do evento e o momento da empresa. O recorte é montado especificamente para esse público.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FORMATOS ============ -->
-<section class="band" id="formatos">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Formatos</span>
-      <h2 class="h-lg">Do keynote de 45 minutos ao dia inteiro de imersão.</h2>
-    </div>
-
-    <div class="formats">
-      <article class="format reveal">
-        <div class="format__t">Formato principal</div>
-        <h3>Palestra</h3>
-        <div class="format__d">45 a 90 minutos</div>
-        <p>Para convenções, congressos, kickoffs comerciais e encontros de liderança. Tema e recorte definidos com você antes do evento.</p>
-      </article>
-      <article class="format reveal" style="--d:.07s">
-        <div class="format__t">Aprofundamento</div>
-        <h3>Workshop ou imersão</h3>
-        <div class="format__d">Meio período a dia inteiro</div>
-        <p>Quando o objetivo é o time sair com plano escrito, e não só com a mensagem. Formato e carga horária sob consulta.</p>
-      </article>
-      <article class="format reveal" style="--d:.14s">
-        <div class="format__t">A distância</div>
-        <h3>Online, ao vivo</h3>
-        <div class="format__d">Mesma estrutura</div>
-        <p>Para times distribuídos, eventos híbridos ou encontros de rede que acontecem fora de um auditório.</p>
-      </article>
-    </div>
-
-    <div class="chips reveal">
-      <span class="chips__label">Costuma funcionar bem em</span>
-      <span class="chip">Convenções e congressos empresariais</span>
-      <span class="chip">Kickoff comercial e eventos de vendas</span>
-      <span class="chip">Programas internos de liderança</span>
-      <span class="chip">Encontros de sucessão familiar</span>
-      <span class="chip">Cooperativas e agronegócio</span>
-      <span class="chip">Universidades e escolas de negócio</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SOBRE ============ -->
-<section class="band band--ridge" id="sobre">
-  <div class="wrap about">
-    <div class="shot reveal">
-      <div class="shot__img">
-        <img src="images/gustavo-pensativo.jpg" width="683" height="1024" alt="Gustavo Sampaio sentado, de blazer azul-marinho, em retrato de estúdio" loading="lazy">
+        <a class="btn btn--gold res__cta reveal" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Quero%20levar%20o%20Gustavo%20Sampaio%20para%20a%20minha%20empresa%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicite uma proposta</a>
       </div>
     </div>
 
-    <div class="reveal" style="--d:.08s">
-      <span class="eyebrow">Sobre o palestrante</span>
-      <h2 class="h-lg">Empresário primeiro. Palestrante por consequência.</h2>
-
-      <p>Gustavo Sampaio é empresário, estrategista, mentor e conselheiro de empresários e negócios familiares. Há mais de oito anos é diretor e sócio da Febracis Goiânia, onde conduz projetos estratégicos de 12 meses diretamente com donos, sucessores e lideranças-chave.</p>
-      <p>Sua atuação se concentra em sucessão, maturidade emocional, comunicação, governança, tomada de decisão e delegação — os pontos em que uma empresa costuma travar antes de travar no número. Além da Febracis, é sócio do Clube de Permuta Goiânia, plataforma B2B com mais de 100 empresários associados, e da CuraVox Gospel.</p>
-
-      <div class="expeditions">
-        <span>Acampamento-base do Everest</span>
-        <span>Travessia do Saara</span>
-        <span>Travessia do Atacama</span>
-        <span>Maratonista</span>
-      </div>
-
-      <p>Ele usa essas travessias no palco pelo motivo mais direto possível: nenhuma delas se faz sem preparo, estratégia e coragem — e nenhuma sucessão, também.</p>
-
-      <div class="creds">
-        <div class="cred"><span><b>Mestrando em Business Administration, Management and Operations</b> — Florida Christian University, desde 2020</span></div>
-        <div class="cred"><span><b>MBA Executivo em Project Management</b> — UPIS</span></div>
-        <div class="cred"><span><b>Diretor e sócio</b> — Febracis Goiânia</span></div>
-        <div class="cred"><span><b>Sócio</b> — Clube de Permuta Goiânia e CuraVox Gospel</span></div>
-        <div class="cred"><span><b>Líder</b> — Ministério Escola de Líderes, Family Church</span></div>
+    <div class="clientes">
+      <h3 class="clientes__ttl reveal">Algumas empresas atendidas</h3>
+      <div class="logos reveal">
+        <ul>
+          <li><img src="images/logos-kit/01-gav-resorts.png" width="194" height="140" alt="GAV Resorts" style="--w:47%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/02-tramontina.svg" width="133" height="20" alt="Tramontina" style="--w:71%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/03-urbs-imobiliaria.png" width="147" height="80" alt="URBS Imobiliária" style="--w:59%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/04-terram.png" width="247" height="152" alt="Terram Soluções Agronômicas" style="--w:61%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/05-rayquimica.png" width="350" height="90" alt="Rayquímica" style="--w:70%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/06-manakai.png" width="250" height="162" alt="Manakai" style="--w:61%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/07-maiara-e-maraisa.png" width="244" height="103" alt="Maiara &amp; Maraisa" style="--w:60%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/08-escola-kingdom.png" width="299" height="134" alt="Escola Kingdom" style="--w:75%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/09-comiva.png" width="269" height="157" alt="Comiva" style="--w:67%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/10-grupo-pinauto.png" width="298" height="117" alt="Grupo Pinauto" style="--w:75%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/11-grupo-cereal.png" width="242" height="130" alt="Grupo Cereal" style="--w:60%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/12-aslof.png" width="262" height="71" alt="ASLOF" style="--w:65%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/13-lider-rolamentos.png" width="688" height="252" alt="Líder Rolamentos" style="--w:70%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/14-marambaia-sementes.svg" width="690" height="447" alt="Marambaia Sementes" style="--w:60%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/15-doterra.svg" width="115" height="21" alt="dōTERRA" style="--w:70%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/16-positiva-fm.png" width="190" height="181" alt="Positiva Goiânia 99.1" style="--w:46%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/17-danglar.svg" width="154" height="80" alt="Danglar Joias e Relógios" style="--w:70%" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos-kit/18-roma-joias.png" width="1372" height="1049" alt="Roma Joias" style="--w:63%" loading="lazy" decoding="async"></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ TRAJETÓRIA ============ -->
-<section class="band" id="trajetoria">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Trajetória</span>
-      <h2 class="h-lg">A rota até aqui.</h2>
-    </div>
-
-    <div class="track">
-      <div class="stop reveal">
-        <span class="stop__y">2008 — 2011</span>
-        <h3>MBA Executivo em Project Management</h3>
-        <p>UPIS. Antes disso, formação técnica em processamento de dados e gestão de TI na administração pública.</p>
-      </div>
-      <div class="stop reveal" style="--d:.05s">
-        <span class="stop__y">Há mais de 8 anos</span>
-        <h3>Direção da Febracis Goiânia</h3>
-        <p>Mentorias executivas, diagnósticos de liderança e programas de people analytics para empresários, negócios familiares e produtores rurais.</p>
-      </div>
-      <div class="stop reveal" style="--d:.1s">
-        <span class="stop__y">Desde 2020</span>
-        <h3>Mestrado em Business Administration</h3>
-        <p>Florida Christian University.</p>
-      </div>
-      <div class="stop reveal" style="--d:.15s">
-        <span class="stop__y">2025</span>
-        <h3>Viva Sua Real Identidade</h3>
-        <p>Mais de 2.000 pessoas em Goiânia, ao lado de Camila Vieira — uma das maiores experiências de desenvolvimento humano já realizadas no estado.</p>
-      </div>
-      <div class="stop reveal" style="--d:.2s">
-        <span class="stop__y">2026</span>
-        <h3>CuraVox Gospel e Escola de Líderes</h3>
-        <p>Sócio da gravadora CuraVox Gospel e líder do Ministério Escola de Líderes, na Family Church.</p>
-      </div>
-      <div class="stop stop--now reveal" style="--d:.25s">
-        <span class="stop__y">Outubro de 2026</span>
-        <h3>Método CIS presencial em Goiânia</h3>
-        <p>Realização ao lado de Paulo Vieira e Camila Vieira.</p>
-      </div>
-    </div>
+<!-- ============ 8 · LEVE GUSTAVO SAMPAIO PARA A SUA EMPRESA (pág. 8) ============ -->
+<section class="leve" id="contato" aria-labelledby="leve-h">
+  <div class="leve__fig">
+    <img src="images/kit/cta-figura.webp" srcset="images/kit/cta-figura-800.webp 800w, images/kit/cta-figura.webp 1040w" sizes="(min-width: 760px) 60vw, 100vw" width="1040" height="2600" alt="Gustavo Sampaio no palco, de terno escuro, segurando o microfone" loading="lazy" decoding="async">
   </div>
-</section>
 
-<!-- ============ COMO FUNCIONA ============ -->
-<section class="band band--ridge">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Como contratar</span>
-      <h2 class="h-lg">Três conversas até o palco.</h2>
+  <div class="leve__txt">
+    <h2 class="leve__ttl reveal" id="leve-h"><span class="leve__a">Leve</span><span class="nome__g gold">Gustavo</span><span class="nome__s goldl">Sampaio</span><span class="leve__b">para a sua empresa</span></h2>
+
+    <div class="leve__p reveal">
+      <p>Palestras para convenções de vendas, encontros de liderança, eventos empresariais, treinamentos de equipes e encontros com clientes e parceiros.</p>
+      <p>Cada experiência é personalizada de acordo com o público, o segmento e os objetivos da organização.</p>
     </div>
 
-    <div class="steps">
-      <div class="step reveal">
-        <span class="step__n">Etapa 01</span>
-        <h3>Contato</h3>
-        <p>Você fala com o time comercial pelo WhatsApp e conta o contexto: público, data, cidade e objetivo do evento.</p>
-      </div>
-      <div class="step reveal" style="--d:.07s">
-        <span class="step__n">Etapa 02</span>
-        <h3>Alinhamento</h3>
-        <p>Definimos juntos tema, recorte, formato — presencial ou online — e a duração que faz sentido para esse público.</p>
-      </div>
-      <div class="step reveal" style="--d:.14s">
-        <span class="step__n">Etapa 03</span>
-        <h3>Confirmação</h3>
-        <p>Fechados os detalhes contratuais, você recebe o briefing técnico com tudo que precisa estar pronto no local.</p>
-      </div>
+    <h3 class="leve__rot reveal">Solicite uma proposta</h3>
+    <ul class="contatos reveal">
+      <li><a href="https://www.instagram.com/eusougustavosampaio/" target="_blank" rel="noopener" aria-label="Instagram: @eusougustavosampaio">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zM17.4 5.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        @eusougustavosampaio</a></li>
+      <li><a href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20falar%20com%20a%20equipe%20do%20Gustavo%20Sampaio." target="_blank" rel="noopener" aria-label="WhatsApp: (62) 98108-4247">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
+        (62) 98108-4247</a></li>
+    </ul>
+
+    <div class="leve__acoes reveal">
+      <a class="btn btn--gold" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Quero%20solicitar%20uma%20proposta%20e%20posso%20passar%20os%20detalhes%20do%20evento." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
+        Solicite uma proposta
+      </a>
+
+      <figure class="qr">
+        <img src="images/kit/qr-whatsapp.svg" alt="QR code que abre a conversa no WhatsApp" width="112" height="112" loading="lazy" decoding="async">
+        <figcaption>Está no computador? Aponte a câmera do celular e fale pelo WhatsApp.</figcaption>
+      </figure>
     </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="band" id="perguntas">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Perguntas frequentes</span>
-      <h2 class="h-lg">O que os organizadores costumam perguntar.</h2>
-    </div>
-
-    <div class="faq reveal" id="faq">
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a1" id="q1">
-          As palestras são presenciais ou online?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a1" role="region" aria-labelledby="q1">
-          <p>Os dois formatos estão disponíveis. Decidimos junto com você o que faz mais sentido para o seu evento e para o seu público.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a2" id="q2">
-          Qual é a duração de uma palestra?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a2" role="region" aria-labelledby="q2">
-          <p>Entre 45 e 90 minutos, no formato mais comum. Workshops e imersões de meio período ou dia inteiro também podem ser combinados sob consulta.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a3" id="q3">
-          O tema é adaptado ao meu público?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a3" role="region" aria-labelledby="q3">
-          <p>Sim. Todos os temas são ajustados em recorte, profundidade e duração — e, quando o contexto pede, o recorte é construído do zero para aquele evento.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a4" id="q4">
-          Como funciona o investimento?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a4" role="region" aria-labelledby="q4">
-          <p>Varia conforme formato, duração, cidade e data do evento. O orçamento é sempre personalizado — fale com o time comercial para receber uma proposta.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a5" id="q5">
-          Atende eventos fora de Goiânia?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a5" role="region" aria-labelledby="q5">
-          <p>Sim. O Gustavo já palestrou em diversas capitais e cidades pelo Brasil, incluindo São Paulo.</p>
-        </div>
-      </div>
-
-      <div class="faq__item">
-        <button class="faq__q" aria-expanded="false" aria-controls="a6" id="q6">
-          Preciso providenciar estrutura de palco e som?
-          <span class="faq__sign" aria-hidden="true"></span>
-        </button>
-        <div class="faq__a" id="a6" role="region" aria-labelledby="q6">
-          <p>Sim. Depois da confirmação você recebe um briefing técnico com tudo que precisa estar disponível no local do evento.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA FINAL ============ -->
-<section class="band close">
-  <div class="wrap">
-    <h2 class="h-lg reveal">Traga essa conversa para o seu palco.</h2>
-    <p class="reveal" style="--d:.06s">Conte o contexto, o público e a data. O time comercial retorna com formato, disponibilidade e proposta.</p>
-    <a class="btn btn--wa reveal" style="--d:.12s" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Quero%20contratar%20uma%20palestra%20com%20o%20Gustavo%20Sampaio%20e%20posso%20passar%20os%20detalhes%20do%20evento." target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
-      Falar com o comercial no WhatsApp
-    </a>
-    <p class="close__meta reveal" style="--d:.18s">Goiânia, GO · Atendimento em todo o Brasil · Presencial e online</p>
   </div>
 </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
+<!-- ============ RODAPÉ ============ -->
 <footer class="ft">
   <div class="wrap ft__in">
     <div>
-      <div class="mark" style="margin-bottom:.6rem">Gustavo Sampaio<span>.</span></div>
-      <p class="ft__legal">© 2026 Gustavo Sampaio. Todos os direitos reservados.<br>
-      Dúvidas? <a href="https://wa.me/5562981084247" target="_blank" rel="noopener">Fale no WhatsApp</a></p>
+      <div class="marca"><b>Gustavo</b>&nbsp;Sampaio</div>
+      <p class="ft__legal">© 2026 Gustavo Sampaio. Todos os direitos reservados. · <a href="https://www.eusougustavosampaio.com/">eusougustavosampaio.com</a></p>
     </div>
 
     <nav class="social" aria-label="Redes sociais">
       <a href="https://www.instagram.com/eusougustavosampaio/" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zM17.4 5.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
       </a>
-      <a href="https://www.youtube.com/@GustavoSampaio/featured" target="_blank" rel="noopener" aria-label="YouTube">
+      <a href="https://www.youtube.com/@GustavoSampaio" target="_blank" rel="noopener" aria-label="YouTube">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 7.2a2.7 2.7 0 0 0-1.9-1.9C18.9 4.8 12 4.8 12 4.8s-6.9 0-8.6.5A2.7 2.7 0 0 0 1.5 7.2C1 8.9 1 12 1 12s0 3.1.5 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.7 2.7 0 0 0 1.9-1.9c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
       </a>
       <a href="https://www.linkedin.com/in/oficialgustavosampaio/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -979,49 +981,32 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
       </a>
     </nav>
   </div>
-</footer>
 
-<a class="wa" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20do%20Gustavo%20Sampaio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <!-- fica DENTRO do rodapé de propósito: é position:fixed (o lugar no HTML não muda onde aparece) e assim pertence a uma região semântica -->
+  <a class="wa" href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20do%20Gustavo%20Sampaio%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
-</a>
+  </a>
+</footer>
 
 <!-- ============ DADOS ESTRUTURADOS ============ -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Person",
-      "@id":"https://eusougustavosampaio.com/#pessoa",
-      "name":"Gustavo Sampaio",
-      "jobTitle":["Palestrante","Empresário","Mentor","Conselheiro de negócios familiares"],
-      "description":"Empresário, estrategista, mentor e palestrante especializado em liderança, inteligência emocional e sucessão em empresas familiares.",
-      "image":"https://eusougustavosampaio.com/palestras/images/gustavo-terno-escuro.jpg",
-      "address":{"@type":"PostalAddress","addressLocality":"Goiânia","addressRegion":"GO","addressCountry":"BR"},
-      "knowsAbout":["Liderança","Inteligência emocional","Sucessão em empresas familiares","Governança corporativa","Alta performance"],
-      "alumniOf":[
-        {"@type":"CollegeOrUniversity","name":"Florida Christian University"},
-        {"@type":"CollegeOrUniversity","name":"UPIS"}
-      ],
-      "sameAs":[
-        "https://www.instagram.com/eusougustavosampaio/",
-        "https://www.youtube.com/@GustavoSampaio",
-        "https://www.linkedin.com/in/oficialgustavosampaio/",
-        "https://www.tiktok.com/@eusougustavosampaio",
-        "https://www.facebook.com/gustavosampaiooficial"
-      ]
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"As palestras são presenciais ou online?","acceptedAnswer":{"@type":"Answer","text":"Os dois formatos estão disponíveis. Decidimos junto com você o que faz mais sentido para o seu evento e para o seu público."}},
-        {"@type":"Question","name":"Qual é a duração de uma palestra?","acceptedAnswer":{"@type":"Answer","text":"Entre 45 e 90 minutos, no formato mais comum. Workshops e imersões de meio período ou dia inteiro também podem ser combinados sob consulta."}},
-        {"@type":"Question","name":"O tema é adaptado ao meu público?","acceptedAnswer":{"@type":"Answer","text":"Sim. Todos os temas são ajustados em recorte, profundidade e duração, e quando o contexto pede o recorte é construído do zero para aquele evento."}},
-        {"@type":"Question","name":"Como funciona o investimento?","acceptedAnswer":{"@type":"Answer","text":"Varia conforme formato, duração, cidade e data do evento. O orçamento é sempre personalizado."}},
-        {"@type":"Question","name":"Atende eventos fora de Goiânia?","acceptedAnswer":{"@type":"Answer","text":"Sim. Gustavo Sampaio já palestrou em diversas capitais e cidades pelo Brasil, incluindo São Paulo."}},
-        {"@type":"Question","name":"Preciso providenciar estrutura de palco e som?","acceptedAnswer":{"@type":"Answer","text":"Sim. Depois da confirmação você recebe um briefing técnico com tudo que precisa estar disponível no local do evento."}}
-      ]
-    }
+  "@type":"Person",
+  "@id":"https://eusougustavosampaio.com/#pessoa",
+  "name":"Gustavo Sampaio",
+  "url":"https://eusougustavosampaio.com/palestras/",
+  "jobTitle":["Palestrante","Empresário","Estrategista"],
+  "description":"Empresário, palestrante e estrategista. Palestras, workshops corporativos, treinamentos e programas para empresas.",
+  "image":"https://eusougustavosampaio.com/palestras/images/kit/og-palestras.jpg",
+  "address":{"@type":"PostalAddress","addressLocality":"Goiânia","addressRegion":"GO","addressCountry":"BR"},
+  "knowsAbout":["Liderança","Inteligência emocional","Alta performance","Produtividade","Trabalho em equipe","Mentalidade financeira"],
+  "sameAs":[
+    "https://www.instagram.com/eusougustavosampaio/",
+    "https://www.youtube.com/@GustavoSampaio",
+    "https://www.linkedin.com/in/oficialgustavosampaio/",
+    "https://www.tiktok.com/@eusougustavosampaio",
+    "https://www.facebook.com/gustavosampaiooficial"
   ]
 }
 </script>
@@ -1029,95 +1014,56 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spac
 <script>
 (function(){
   'use strict';
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- reveal ----------
-     Vem primeiro de propósito: o conteúdo começa invisível, então
-     qualquer erro mais abaixo não pode impedir que ele apareça.     */
-  var revealables = document.querySelectorAll('.reveal');
-  function revealAll(){ Array.prototype.forEach.call(revealables, function(el){ el.classList.add('is-in'); }); }
-
-  if (reduced || !('IntersectionObserver' in window)){
-    revealAll();
-  } else {
-    try {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
+  /* ---- reveal à prova de falha: vem primeiro de propósito ---- */
+  var itens = [].slice.call(document.querySelectorAll('.reveal'));
+  function mostraTudo(){ itens.forEach(function(el){ el.classList.add('is-in'); }); }
+  try{
+    var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!('IntersectionObserver' in window) || semMovimento){
+      mostraTudo();
+    }else{
+      var io = new IntersectionObserver(function(entradas){
+        entradas.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
         });
-      }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
-      Array.prototype.forEach.call(revealables, function(el){ io.observe(el); });
-      /* rede de segurança: se nada apareceu, mostra tudo */
+      },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+      itens.forEach(function(el){ io.observe(el); });
+      /* redes de segurança: impressão, e observer que nunca dispara */
+      window.addEventListener('beforeprint', mostraTudo);
       setTimeout(function(){
-        if (!document.querySelector('.reveal.is-in')) revealAll();
+        var visiveis = itens.filter(function(el){ return el.classList.contains('is-in'); }).length;
+        if(!visiveis){ mostraTudo(); }
       }, 2500);
-    } catch (e){ revealAll(); }
-  }
+    }
+  }catch(erro){ mostraTudo(); }
 
-  /* ---------- header sticky ---------- */
+  /* ---- cabeçalho ganha fundo quando a capa começa a rolar ---- */
   var hdr = document.getElementById('hdr');
-
-  /* ---------- menu mobile ---------- */
-  var burger = document.getElementById('burger');
-  var sheet  = document.getElementById('sheet');
-
-  function setMenu(open){
-    burger.setAttribute('aria-expanded', String(open));
-    burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    sheet.dataset.open = String(open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-  burger.addEventListener('click', function(){
-    setMenu(burger.getAttribute('aria-expanded') !== 'true');
-  });
-  sheet.addEventListener('click', function(e){
-    if (e.target.tagName === 'A') setMenu(false);
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && sheet.dataset.open === 'true') { setMenu(false); burger.focus(); }
-  });
-
-  /* ---------- fundo do header ao rolar ---------- */
   var ticking = false;
-  function frame(){
-    ticking = false;
-    hdr.classList.toggle('hdr--stuck', window.scrollY > 12);
+  function pintaHdr(){ hdr.classList.toggle('is-solid', window.scrollY > 12); ticking = false; }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ ticking = true; window.requestAnimationFrame(pintaHdr); }
+  }, {passive:true});
+  pintaHdr();
+
+  /* ---- menu do celular ---- */
+  var burger = document.getElementById('burger');
+  var sheet = document.getElementById('sheet');
+  function menu(abrir){
+    burger.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+    burger.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+    sheet.classList.toggle('is-open', abrir);
+    document.body.classList.toggle('is-locked', abrir);
+    if(abrir){ hdr.classList.add('is-solid'); } else { pintaHdr(); }
   }
-  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }
-
-  window.addEventListener('scroll', onScroll, {passive:true});
-  frame();
-
-  /* ---------- FAQ ---------- */
-  var faq = document.getElementById('faq');
-  faq.addEventListener('click', function(e){
-    var q = e.target.closest('.faq__q');
-    if (!q) return;
-
-    var panel = document.getElementById(q.getAttribute('aria-controls'));
-    var open  = q.getAttribute('aria-expanded') === 'true';
-
-    /* acordeão: uma resposta aberta por vez */
-    faq.querySelectorAll('.faq__q[aria-expanded="true"]').forEach(function(other){
-      other.setAttribute('aria-expanded','false');
-      document.getElementById(other.getAttribute('aria-controls')).style.height = '0px';
-    });
-
-    if (!open){
-      q.setAttribute('aria-expanded','true');
-      panel.style.height = panel.scrollHeight + 'px';
-    }
+  burger.addEventListener('click', function(){ menu(burger.getAttribute('aria-expanded') !== 'true'); });
+  sheet.addEventListener('click', function(e){ if(e.target.closest('a')){ menu(false); } });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true'){ menu(false); burger.focus(); }
   });
-
-  /* reajusta a altura do item aberto quando a largura muda */
   window.addEventListener('resize', function(){
-    var open = faq.querySelector('.faq__q[aria-expanded="true"]');
-    if (open){
-      var panel = document.getElementById(open.getAttribute('aria-controls'));
-      panel.style.height = 'auto';
-      var h = panel.scrollHeight;
-      panel.style.height = h + 'px';
-    }
+    if(window.innerWidth >= 1000 && burger.getAttribute('aria-expanded') === 'true'){ menu(false); }
   });
 })();
 </script>
