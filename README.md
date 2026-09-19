@@ -74,8 +74,9 @@ python -m http.server 8765
 ## Deploy
 
 **No ar em https://eusougustavosampaio.com/palestras/ desde 19/09/2026**, por **Cloudflare
-Workers** — a plataforma da GKS. A Vercel ficou para trás (decisão de 18/08/2026); o
-`gustavo-sampaio-palestras.vercel.app` é resíduo, não a fonte da verdade.
+Workers** — a plataforma da GKS. O projeto que este repo tinha na Vercel **foi apagado em
+19/09/2026**, a pedido do Danilo: aquele endereço não existe mais e o push não constrói nada
+fora da Cloudflare.
 
 Worker `gustavo-sampaio-palestras`, conta `Gustavosampaio1717@icloud.com`. Endereço de
 reserva, servindo a mesma página na raiz:
