@@ -290,6 +290,23 @@ body.is-locked{overflow:hidden}
 .capa__lead{margin-top:.9rem;max-width:33rem}
 .capa__cta{margin-top:1.7rem;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.75rem}
 
+@media (max-width:759px){
+  /* O rosto se mede pela LARGURA da tela, nao pela altura. Antes a foto cobria a capa inteira: em celular
+     baixo ela encolhia junto, o texto (preso embaixo) subia, e o "O" de GUSTAVO caia na boca dele.
+     Agora a foto tem altura fixa em vw — cabelo a ~24vw do topo, queixo a ~73vw — e o texto nunca
+     comeca antes de 80vw. Em celular baixo a capa passa um pouco da tela; em nenhum o nome toca o rosto. */
+  .capa{padding-top:max(calc(var(--hdr) + 2rem), 84vw);background:#10110a}
+  .capa::after{display:none}
+  /* 22/09 noite: "muito no canto" — a foto encosta pela DIREITA (object-position 100%) e cresce um pouco
+     (185 -> 200vw): o rosto sai de ~70vw para ~61vw e a orelha fica a 17vw da borda */
+  .capa__fig{inset:-9vw 0 auto 0;height:200vw}
+  .capa__fig img{object-position:100% 0}
+  .capa__fig::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(21,22,5,.55) 0%,rgba(21,22,5,0) 16%,rgba(21,22,5,0) 44%,rgba(16,17,4,.82) 57%,rgba(16,17,4,.95) 72%,#10110a 88%);
+  }
+}
+
 @media (min-width:760px){
   .capa{align-items:center;padding-bottom:calc(var(--hdr) * .5)}
   .capa::before{  /* brilho âmbar que sobe pela borda esquerda da capa */
@@ -297,7 +314,12 @@ body.is-locked{overflow:hidden}
     background:linear-gradient(90deg,#382804 0%,rgba(44,28,3,.75) 12%,rgba(31,23,3,0) 32%);
   }
   .capa__fig{inset:0 0 0 auto;width:min(62vw,1100px)}
-  .capa__fig img{object-position:50% 0;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34%);mask-image:linear-gradient(90deg,transparent 0,#000 34%)}
+  /* a figura e alta (1391x2600): com cover numa caixa larga e baixa sobrava so a cabeca, do queixo para
+     cima. Aqui ela se mede pela ALTURA da capa — 140% dela, mostrando do cabelo ao peito, com o microfone —
+     e ancora na direita. Onde a caixa e estreita (tablet em pe), max-width + cover corta as laterais. */
+  .capa__fig img{position:absolute;top:-4%;right:clamp(1.5rem,5vw,5rem);height:140%;width:auto;max-width:100%;object-fit:cover;object-position:50% 0;
+    /* afastada da borda direita (22/09 noite: "muito no canto"): o ombro cortado pela borda da foto se dissolve */
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 86%,transparent 100%)}
   .capa::after{background:linear-gradient(180deg,rgba(21,22,5,.55) 0%,rgba(21,22,5,0) 14%,rgba(21,22,5,0) 82%,rgba(16,17,4,.9) 100%)}
   .capa__txt > *{max-width:min(45vw,38rem)}
   .capa__txt > .nome{font-size:clamp(4.2rem,9.3vw,9.5rem);max-width:none}
@@ -311,8 +333,19 @@ body.is-locked{overflow:hidden}
   background:linear-gradient(180deg,#2E2C29 0%,#262422 40%,#201F1D 100%);
 }
 .quem__foto{position:relative;overflow:hidden;height:min(118vw,78vh)}
-.quem__foto img{width:100%;height:100%;object-fit:cover;object-position:30% 0}
-.quem__foto::after{content:"";position:absolute;inset:auto 0 0 0;height:34%;background:linear-gradient(180deg,rgba(36,35,33,0),#262422)}
+/* celular: no retrato ele esta a 29% da largura (o kit deixava a direita para o texto). A foto se mede pela
+   altura e desliza ate o rosto cair no meio da tela.
+   22/09 noite: a primeira versao disto deixava o rosto e o ombro cinzentos — a mascara da esquerda
+   (24% da foto) chegava ate o meio do rosto, e um veu de cor cobria a metade de baixo. Agora a mascara
+   da esquerda so dissolve a borda cortada (6%, antes da orelha) e o fim da foto some por mascara
+   no PROPRIO bloco, sem veu: ele aparece inteiro e com a cor dele, e a linha de corte acima do
+   "Quem e" desaparece porque a foto se dissolve no fundo que estiver ali, seja qual for o tom. */
+.quem__foto img{position:absolute;top:0;left:calc(50% - .29 * 82.5vw);width:82.5vw;height:165vw;max-width:none;object-fit:cover;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%);mask-image:linear-gradient(90deg,transparent 0,#000 6%)}
+.quem__foto::after{content:none}
+@media (max-width:699px){
+  .quem__foto{-webkit-mask-image:linear-gradient(180deg,#000 76%,transparent 100%);mask-image:linear-gradient(180deg,#000 76%,transparent 100%)}
+}
 .quem__txt{position:relative;padding:clamp(2rem,6vw,3.5rem) var(--gut) var(--band);margin-top:-2.5rem}
 .quem .ttl{font-size:clamp(2.2rem,8.2vw,4.1rem);letter-spacing:-.01em}
 .quem .ttl__l{font-size:.95em}
@@ -325,7 +358,10 @@ body.is-locked{overflow:hidden}
 @media (min-width:700px){   /* duas colunas cedo: empilhado no tablet, o retrato vira um rosto gigante */
   .quem{display:grid;grid-template-columns:minmax(0,43%) minmax(0,1fr);align-items:stretch}
   .quem__foto{height:auto;min-height:100%}
-  .quem__foto img{position:absolute;inset:0;object-position:22% 0;-webkit-mask-image:linear-gradient(90deg,#000 60%,transparent 100%);mask-image:linear-gradient(90deg,#000 60%,transparent 100%)}
+  /* desloca ~40 px para a direita (pedido de 22/09: "muito no canto esquerdo"); a faixa que abre a esquerda
+     e coberta pela propria foto se dissolvendo no fundo */
+  .quem__foto img{position:absolute;inset:0;left:clamp(1.5rem,3vw,3.5rem);top:0;width:100%;height:100%;object-position:0 0;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 60%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 60%,transparent 100%)}
   .quem__foto::after{display:none}
   .quem__txt{margin-top:0;padding:var(--band) var(--edge) var(--band) clamp(.5rem,2vw,2rem)}
 }
@@ -542,7 +578,7 @@ body.is-locked{overflow:hidden}
   background:var(--petroleo);
 }
 .leve__fig{position:absolute;inset:0 0 auto 0;height:min(128vw,82vh);z-index:-2}
-.leve__fig img{width:100%;height:100%;object-fit:cover;object-position:48% 0}
+.leve__fig img{width:100%;height:100%;object-fit:cover;object-position:48% -14vw}   /* celular: sobe ~55 px, pedido de 22/09 */
 .leve::after{content:"";position:absolute;inset:0 0 auto 0;height:min(128vw,82vh);z-index:-1;background:linear-gradient(180deg,rgba(13,24,24,.5) 0%,rgba(13,24,24,0) 18%,rgba(13,24,24,0) 46%,rgba(13,24,24,.9) 82%,var(--petroleo) 100%)}
 .leve__txt{width:100%;max-width:calc(var(--wrap) - 2 * var(--gut));margin:0 auto}
 .leve__ttl{text-transform:uppercase;line-height:.95;letter-spacing:-.012em}
@@ -610,15 +646,6 @@ body.is-locked{overflow:hidden}
 .dor__lista li{position:relative;padding-left:2em;font-size:clamp(1.02rem,1.75vw,1.3rem);line-height:1.4}
 .dor__lista li::before{content:"";position:absolute;left:0;top:.62em;width:1.2em;height:2px;background:var(--gold)}
 .dor__pe{margin-top:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--gold);font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.3}
-
-/* --- ocasioes: a propria lista da capa do kit, virada em reconhecimento --- */
-.ocas{margin-top:clamp(2.2rem,4vw,3.2rem);padding-right:var(--gut)}
-.ocas__ttl{font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-size:clamp(.92rem,1.5vw,1.08rem)}
-.ocas__ul{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.55rem}
-.ocas__ul li{
-  padding:.55em 1.05em;border:1px solid rgba(235,203,108,.5);border-radius:100px;
-  font-size:clamp(.86rem,1.4vw,1.02rem);line-height:1.2;
-}
 
 /* --- moldura dos 18 logos: o que eles provam --- */
 .clientes__sub{margin:.8rem auto 0;max-width:46rem;text-align:center;font-size:clamp(1rem,1.65vw,1.2rem);line-height:1.45}
@@ -915,19 +942,6 @@ body.is-locked{overflow:hidden}
         <li class="reveal" style="--d:.12s">Treinamentos de 4h, 8h ou 16h</li>
         <li class="reveal" style="--d:.18s">Programas para empresas</li>
       </ul>
-
-      <!-- GATILHO · reconhecimento: a lista é a da capa do kit, virada em ocasião -->
-      <div class="ocas reveal">
-        <h4 class="ocas__ttl">Costuma funcionar bem em:</h4>
-        <ul class="ocas__ul">
-          <li>Convenções de vendas</li>
-          <li>Encontros de liderança</li>
-          <li>Eventos empresariais</li>
-          <li>Treinamentos de equipes</li>
-          <li>Encontros com clientes e parceiros</li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
@@ -981,7 +995,7 @@ body.is-locked{overflow:hidden}
     <div class="res__topo">
       <h2 class="res__ttl" id="res-h"><span class="res__big"><span class="sunset">Resultados</span></span><span class="res__sub">para a sua organização</span></h2>
 
-      <img class="res__foto" src="images/kit/banco.webp" width="672" height="1925" alt="Gustavo Sampaio sentado em um banco alto, de blazer cinza claro e camiseta branca, sorrindo" loading="lazy" decoding="async">
+      <img class="res__foto" src="images/kit/banco.webp" width="677" height="1925" alt="Gustavo Sampaio sentado em um banco alto, de blazer cinza claro e camiseta branca, sorrindo" loading="lazy" decoding="async">
 
       <div class="res__lista">
         <ul class="ganhos reveal">
@@ -1077,7 +1091,7 @@ body.is-locked{overflow:hidden}
     <h3 class="leve__rot reveal">Solicite uma proposta</h3>
     <ul class="contatos reveal">
       <li><a href="https://www.instagram.com/eusougustavosampaio/" target="_blank" rel="noopener" aria-label="Instagram: @eusougustavosampaio">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zM17.4 5.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.25"/></svg>
         @eusougustavosampaio</a></li>
       <li><a href="https://wa.me/5562981084247?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20de%20palestras%20e%20gostaria%20de%20falar%20com%20a%20equipe%20do%20Gustavo%20Sampaio." target="_blank" rel="noopener" aria-label="WhatsApp: (62) 98108-4247">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.2-1.16l-.3-.18-3 .78.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.6-5.8c-.25-.13-1.5-.74-1.73-.82-.23-.09-.4-.13-.57.12-.17.25-.66.82-.8 1-.15.17-.3.19-.55.06-.25-.12-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.07-.12-.57-1.37-.78-1.88-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.6c.13.18 1.78 2.72 4.3 3.81.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.09.16-1.2-.07-.1-.23-.16-.48-.29z"/></svg>
@@ -1110,7 +1124,7 @@ body.is-locked{overflow:hidden}
 
     <nav class="social" aria-label="Redes sociais">
       <a href="https://www.instagram.com/eusougustavosampaio/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-1.1.05-1.7.24-2.1.4-.5.2-.9.44-1.3.84-.4.4-.64.8-.84 1.3-.16.4-.35 1-.4 2.1C2.6 9.9 2.6 10.3 2.6 12s0 2.1.06 3.3c.05 1.1.24 1.7.4 2.1.2.5.44.9.84 1.3.4.4.8.64 1.3.84.4.16 1 .35 2.1.4 1.2.06 1.6.06 4.7.06s3.5 0 4.7-.06c1.1-.05 1.7-.24 2.1-.4.5-.2.9-.44 1.3-.84.4-.4.64-.8.84-1.3.16-.4.35-1 .4-2.1.06-1.2.06-1.6.06-3.3s0-2.1-.06-3.3c-.05-1.1-.24-1.7-.4-2.1-.2-.5-.44-.9-.84-1.3-.4-.4-.8-.64-1.3-.84-.4-.16-1-.35-2.1-.4C15.5 4 15.1 4 12 4zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4zM17.4 5.6a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.25"/></svg>
       </a>
       <a href="https://www.youtube.com/@GustavoSampaio" target="_blank" rel="noopener" aria-label="YouTube">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 7.2a2.7 2.7 0 0 0-1.9-1.9C18.9 4.8 12 4.8 12 4.8s-6.9 0-8.6.5A2.7 2.7 0 0 0 1.5 7.2C1 8.9 1 12 1 12s0 3.1.5 4.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 8.6.5 8.6.5s6.9 0 8.6-.5a2.7 2.7 0 0 0 1.9-1.9c.5-1.7.5-4.8.5-4.8s0-3.1-.5-4.8zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>
