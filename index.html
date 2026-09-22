@@ -576,6 +576,78 @@ body.is-locked{overflow:hidden}
   .qr figcaption{max-width:12rem;font-size:.92rem;font-weight:400;line-height:1.35}
 }
 
+
+/* ============================================================
+   GATILHOS DE COPY — blocos que NAO vem do midia kit
+   Acrescentados em 22/09/2026: o time leu a pagina como "direta demais".
+   Regra: nenhum numero ou promessa nova. Tudo aqui ou repete dado do kit,
+   ou e pergunta retorica, ou descreve processo. Cor, fonte e forma saem
+   todas do :root e da luz da secao vizinha.
+   ============================================================ */
+
+/* --- prova social na entrada: os tres numeros da p2, antes da rolagem --- */
+.prova{
+  position:relative;
+  padding:clamp(2.2rem,4.5vw,3.4rem) 0;
+  /* emenda o preto-oliva da capa no grafite da p2 */
+  background:linear-gradient(180deg,#101104 0%,#1D1C19 100%);
+  border-top:1px solid rgba(235,203,108,.16);
+}
+.prova__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.7rem,2.4vw,2.4rem);text-align:center}
+.prova__n{display:block;font-weight:800;line-height:1;font-size:clamp(1.55rem,5.2vw,3.3rem);letter-spacing:-.02em;color:var(--gold)}
+.prova__l{display:block;margin-top:.5em;font-weight:500;line-height:1.25;font-size:clamp(.78rem,1.45vw,1.05rem);text-transform:uppercase;letter-spacing:.05em}
+.prova__pe{
+  margin-top:clamp(1.4rem,2.6vw,2.1rem);
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0 1rem;
+  text-align:center;font-size:clamp(.96rem,1.55vw,1.12rem);line-height:1.45;
+}
+
+/* --- a pergunta que a secao seguinte responde --- */
+.dor{padding:var(--band) 0;background:linear-gradient(180deg,#1F1E1C 0%,#0E0A07 62%,var(--palco) 100%)}
+.dor__ttl{max-width:38rem;font-weight:300;font-size:clamp(1.5rem,3.3vw,2.55rem);line-height:1.22}
+.dor__ttl b{display:block;margin-top:.15em;font-weight:800;color:var(--gold)}
+.dor__lista{margin-top:clamp(1.8rem,3.4vw,2.8rem);display:grid;gap:clamp(.9rem,1.8vw,1.35rem);max-width:47rem}
+.dor__lista li{position:relative;padding-left:2em;font-size:clamp(1.02rem,1.75vw,1.3rem);line-height:1.4}
+.dor__lista li::before{content:"";position:absolute;left:0;top:.62em;width:1.2em;height:2px;background:var(--gold)}
+.dor__pe{margin-top:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--gold);font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.3}
+
+/* --- ocasioes: a propria lista da capa do kit, virada em reconhecimento --- */
+.ocas{margin-top:clamp(2.2rem,4vw,3.2rem);padding-right:var(--gut)}
+.ocas__ttl{font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-size:clamp(.92rem,1.5vw,1.08rem)}
+.ocas__ul{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.55rem}
+.ocas__ul li{
+  padding:.55em 1.05em;border:1px solid rgba(235,203,108,.5);border-radius:100px;
+  font-size:clamp(.86rem,1.4vw,1.02rem);line-height:1.2;
+}
+
+/* --- moldura dos 18 logos: o que eles provam --- */
+.clientes__sub{margin:.8rem auto 0;max-width:46rem;text-align:center;font-size:clamp(1rem,1.65vw,1.2rem);line-height:1.45}
+
+/* --- os tres passos ate o palco: tira o atrito do CTA final --- */
+.passos{padding:var(--band) 0;background:linear-gradient(180deg,#2B2721 0%,#14201F 62%,var(--petroleo) 100%)}
+.passos__ttl{text-align:center;font-weight:300;font-size:clamp(1.65rem,4vw,2.9rem);line-height:1.18}
+.passos__ttl b{font-weight:800;color:var(--gold)}
+.passos__grid{margin-top:clamp(2rem,4vw,3.2rem);list-style:none;display:grid;gap:clamp(1rem,2.2vw,1.8rem)}
+.passos__grid li{
+  padding:clamp(1.3rem,2.4vw,1.9rem) clamp(1.4rem,2.6vw,2.1rem);
+  border:1px solid rgba(235,203,108,.28);border-radius:clamp(18px,2.4vw,26px);background:rgba(0,0,0,.24);
+}
+.passos__n{display:block;font-family:var(--cond);font-weight:400;line-height:1;color:var(--gold);font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.passos__t{display:block;margin-top:.45em;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1rem,1.6vw,1.16rem)}
+.passos__d{margin-top:.55em;font-size:clamp(.97rem,1.55vw,1.1rem);line-height:1.45}
+@media (min-width:760px){ .passos__grid{grid-template-columns:repeat(3,1fr)} }
+
+/* --- microcopy que tira o medo de chamar --- */
+.leve__nota{margin-top:1.2rem;max-width:31rem;font-size:clamp(.95rem,1.5vw,1.08rem);line-height:1.45;color:rgba(255,255,255,.88)}
+
+
+/* --- um CTA a mais, no fim da p3 ---
+   22/09/2026: cinco botoes novos viraram um so. O pedido veio em duas partes — primeiro
+   "faltam botoes durante o site", depois "ficou muito botao, tem que ser lugar estrategico".
+   Ficou o unico vao real que a pagina tinha: da p2 ate o Everest nao havia nada clicavel,
+   e o fim dos cinco verbos e onde a promessa da palestra acabou de ser feita. */
+.cta-sec{margin-top:clamp(2.2rem,4vw,3.2rem)}
+
 /* ============================================================
    RODAPÉ + WHATSAPP FLUTUANTE
    ============================================================ */
@@ -683,6 +755,21 @@ body.is-locked{overflow:hidden}
   </div>
 </section>
 
+<!-- ============ GATILHO · PROVA SOCIAL NA ENTRADA (não vem do kit) ============ -->
+<section class="prova" aria-label="Experiência em números">
+  <div class="wrap">
+    <ul class="prova__grid reveal">
+      <li><strong class="prova__n">+3.000</strong><span class="prova__l">palestras</span></li>
+      <li><strong class="prova__n">+400 mil</strong><span class="prova__l">pessoas treinadas</span></li>
+      <li><strong class="prova__n">+3.600h</strong><span class="prova__l">de mentoria individual</span></li>
+    </ul>
+    <p class="prova__pe reveal" style="--d:.1s">
+      <span>Entre as empresas atendidas: indústria, agronegócio, varejo, serviços e comunicação.</span>
+      <a class="lnk" href="#resultados">Ver quais <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </p>
+  </div>
+</section>
+
 <!-- ============ 2 · QUEM É (pág. 2) ============ -->
 <section class="quem" id="quem-e" aria-labelledby="quem-h">
   <div class="quem__foto">
@@ -695,8 +782,8 @@ body.is-locked{overflow:hidden}
     <p class="quem__abre reveal">Sou <strong>empresário, palestrante</strong> e <strong>estrategista.</strong></p>
 
     <div class="quem__bio just reveal">
-      <p>Gustavo Sampaio construiu sua base de liderança e alta performance ao longo de seis anos no Banco do Brasil, após ser aprovado em concurso público.</p>
-      <p>Em 2018, expandiu sua atuação nos negócios ao se tornar sócio de Paulo Vieira na franquia Febracis Goiânia, onde atuou como diretor até 2026.</p>
+      <p>Gustavo Sampaio construiu sua base de liderança e alta performance ao longo de <strong>seis anos no Banco do Brasil</strong>, após ser aprovado em concurso público.</p>
+      <p>Em 2018, expandiu sua atuação nos negócios ao se tornar <strong>sócio de Paulo Vieira na franquia Febracis Goiânia</strong>, onde atuou como diretor até 2026.</p>
       <p>Atualmente lidera pessoas, projetos e processos voltados ao desenvolvimento pessoal e corporativo.</p>
       <p>Essa busca por superação também se reflete em sua paixão por desafios extremos de alta performance e inteligência emocional, como travessias no Deserto do Saara e Atacama, nos Lençóis Maranhenses e a subida ao acampamento base do Everest.</p>
       <p>Sua trajetória prática moldou uma convicção central: nenhuma empresa cresce de forma consistente sem desenvolver as pessoas que sustentam seus resultados.</p>
@@ -709,6 +796,20 @@ body.is-locked{overflow:hidden}
       <li><strong>+ 400 mil</strong> pessoas treinadas</li>
       <li><strong>+ 3.600</strong> horas de mentoria individual</li>
     </ul>
+
+  </div>
+</section>
+
+<!-- ============ GATILHO · A PERGUNTA QUE A PÁGINA 3 RESPONDE (não vem do kit) ============ -->
+<section class="dor" aria-label="O que costuma sobrar depois do evento">
+  <div class="wrap">
+    <h2 class="dor__ttl reveal">Toda convenção termina com a plateia de pé. <b>A pergunta é o que sobra na segunda-feira.</b></h2>
+    <ul class="dor__lista">
+      <li class="reveal">O time sabe o que precisa ser feito — e mesmo assim não faz.</li>
+      <li class="reveal" style="--d:.06s">A liderança decide no improviso e passa o ano apagando incêndio.</li>
+      <li class="reveal" style="--d:.12s">A mensagem do evento empolga na hora e some na primeira semana de rotina.</li>
+    </ul>
+    <p class="dor__pe reveal" style="--d:.18s">É exatamente nesse ponto que a palestra tem de agir.</p>
   </div>
 </section>
 
@@ -737,6 +838,8 @@ body.is-locked{overflow:hidden}
       <li class="reveal" style="--d:.18s"><strong><span class="gold">Fortalecer</span></strong><span>a comunicação e o trabalho em equipe.</span></li>
       <li class="reveal" style="--d:.24s"><strong><span class="gold">Transformar</span></strong><span>desafios em oportunidades de crescimento.</span></li>
     </ul>
+
+    <a class="btn btn--gold cta-sec reveal" href="https://wa.me/5562981084247?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20palestras.%20Quero%20essa%20experi%C3%AAncia%20para%20a%20minha%20equipe%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Quero essa experiência no meu evento</a>
   </div>
 </section>
 
@@ -812,6 +915,19 @@ body.is-locked{overflow:hidden}
         <li class="reveal" style="--d:.12s">Treinamentos de 4h, 8h ou 16h</li>
         <li class="reveal" style="--d:.18s">Programas para empresas</li>
       </ul>
+
+      <!-- GATILHO · reconhecimento: a lista é a da capa do kit, virada em ocasião -->
+      <div class="ocas reveal">
+        <h4 class="ocas__ttl">Costuma funcionar bem em:</h4>
+        <ul class="ocas__ul">
+          <li>Convenções de vendas</li>
+          <li>Encontros de liderança</li>
+          <li>Eventos empresariais</li>
+          <li>Treinamentos de equipes</li>
+          <li>Encontros com clientes e parceiros</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -865,7 +981,7 @@ body.is-locked{overflow:hidden}
     <div class="res__topo">
       <h2 class="res__ttl" id="res-h"><span class="res__big"><span class="sunset">Resultados</span></span><span class="res__sub">para a sua organização</span></h2>
 
-      <img class="res__foto" src="images/kit/banco.webp" width="677" height="1900" alt="Gustavo Sampaio sentado em um banco alto, de blazer cinza claro e camiseta branca, sorrindo" loading="lazy" decoding="async">
+      <img class="res__foto" src="images/kit/banco.webp" width="672" height="1925" alt="Gustavo Sampaio sentado em um banco alto, de blazer cinza claro e camiseta branca, sorrindo" loading="lazy" decoding="async">
 
       <div class="res__lista">
         <ul class="ganhos reveal">
@@ -889,6 +1005,8 @@ body.is-locked{overflow:hidden}
 
     <div class="clientes">
       <h3 class="clientes__ttl reveal">Algumas empresas atendidas</h3>
+      <!-- GATILHO · o que os 18 logos provam -->
+      <p class="clientes__sub reveal">Em todas, o mesmo ponto de partida: tema, recorte e formato ajustados ao público e ao objetivo daquele evento.</p>
       <div class="logos reveal">
         <ul>
           <li><img src="images/logos-kit/01-gav-resorts.png" width="194" height="140" alt="GAV Resorts" style="--w:47%" loading="lazy" decoding="async"></li>
@@ -915,6 +1033,30 @@ body.is-locked{overflow:hidden}
   </div>
 </section>
 
+<!-- ============ GATILHO · COMO SAI DO CONTATO PARA O PALCO (não vem do kit) ============ -->
+<section class="passos" aria-label="Como contratar">
+  <div class="wrap">
+    <h2 class="passos__ttl reveal">Do primeiro contato ao palco, <b>em três conversas.</b></h2>
+    <ol class="passos__grid">
+      <li class="reveal">
+        <span class="passos__n">01</span>
+        <span class="passos__t">Contato</span>
+        <p class="passos__d">Você chama no WhatsApp e conta o contexto: público, data, cidade e objetivo do evento.</p>
+      </li>
+      <li class="reveal" style="--d:.08s">
+        <span class="passos__n">02</span>
+        <span class="passos__t">Alinhamento</span>
+        <p class="passos__d">Definimos juntos o tema, o formato — presencial ou online — e a duração que faz sentido para esse público.</p>
+      </li>
+      <li class="reveal" style="--d:.16s">
+        <span class="passos__n">03</span>
+        <span class="passos__t">Confirmação</span>
+        <p class="passos__d">Fechados os detalhes, você recebe as orientações técnicas do que precisa estar pronto no local.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <!-- ============ 8 · LEVE GUSTAVO SAMPAIO PARA A SUA EMPRESA (pág. 8) ============ -->
 <section class="leve" id="contato" aria-labelledby="leve-h">
   <div class="leve__fig">
@@ -928,6 +1070,9 @@ body.is-locked{overflow:hidden}
       <p>Palestras para convenções de vendas, encontros de liderança, eventos empresariais, treinamentos de equipes e encontros com clientes e parceiros.</p>
       <p>Cada experiência é personalizada de acordo com o público, o segmento e os objetivos da organização.</p>
     </div>
+
+    <!-- GATILHO · tira o atrito de chamar -->
+    <p class="leve__nota reveal">Não precisa ter tudo definido: conte o contexto do evento e a proposta é montada a partir dele.</p>
 
     <h3 class="leve__rot reveal">Solicite uma proposta</h3>
     <ul class="contatos reveal">
