@@ -15,9 +15,16 @@ Landing page de contratação de palestras do Gustavo Sampaio. Desde 19/09/2026 
 | Resultados + empresas atendidas | `#resultados` | 7 |
 | Leve Gustavo Sampaio para a sua empresa | `#contato` | 8 |
 
-O que a página tem **a mais** que o PDF é só interface: menu, botões de WhatsApp (uma mensagem
-diferente por botão, para saber de onde o contato veio), "Quero esta palestra" em cada tema,
-QR de WhatsApp no desktop e rodapé.
+O que a página tem **a mais** que o PDF:
+
+- **Interface** — menu, botões de WhatsApp (uma mensagem diferente por botão, para saber de onde
+  o contato veio), "Quero esta palestra" em cada tema, QR de WhatsApp no desktop e rodapé.
+- **Blocos de copy, desde 22/09/2026** — o time leu a página como "direta demais". Entraram, fora
+  da ordem do kit: a faixa de números logo abaixo da capa, a pergunta "o que sobra na
+  segunda-feira" antes da p3, uma linha sobre os 18 logos, os três passos até o palco antes da p8,
+  e uma frase sob o botão final. Mais um botão no fim da p3. Todos marcados com `GATILHO` no
+  HTML. Nenhum traz número ou promessa nova: repetem dado do kit, perguntam, ou descrevem
+  processo. O `conferir_pagina.py` os lista como "texto que não vem do PDF".
 
 ## Estrutura
 
