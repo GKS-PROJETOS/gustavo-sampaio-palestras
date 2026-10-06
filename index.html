@@ -470,6 +470,11 @@ body.is-locked{overflow:hidden}
   background:linear-gradient(90deg,#4D3502 0%,#4D3502 46%,#664A03 74%,#966D03 100%);
 }
 
+/* 06/10: no celular a foto do sorriso saiu (pedido dele); os formatos vêm logo depois da tira */
+@media (max-width:699px){
+  .pal__foto{display:none}
+  .pal__fmt{margin-top:0;padding-top:clamp(1.6rem,6vw,2.4rem)}
+}
 @media (min-width:700px){
   .tira{grid-template-columns:repeat(4,1fr)}
   .pal__grid{display:grid;grid-template-columns:minmax(0,41%) minmax(0,1fr);align-items:center}
@@ -557,6 +562,21 @@ body.is-locked{overflow:hidden}
 
 @media (min-width:640px){
   .logos ul{grid-template-columns:repeat(6,1fr)}
+}
+/* celular (360-599): a foto encolhe para a coluna da direita e a lista corre ao lado dela, como no
+   computador. A citacao e o botao voltam para a largura toda. Abaixo de 360 a coluna da lista ficaria
+   estreita demais para "PRODUTIVIDADE" em 18,7px (o minimo para o contraste de texto grande), entao ali
+   continua empilhado. */
+@media (min-width:360px) and (max-width:599px){
+  .res__topo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,37%);column-gap:.75rem;align-items:start}
+  .res__ttl{grid-column:1 / -1;grid-row:1}
+  .res__foto{grid-column:2;grid-row:1 / span 2;width:100%;margin:calc(14.4vw * .92) 0 0;justify-self:end}
+  .res__lista{display:contents}
+  .ganhos{grid-column:1;grid-row:2;margin-top:1.3rem;align-self:start}
+  /* com a lista ao lado da foto, a citacao sobe e cai no ponto mais claro do holofote: amarelo sobre ele dava
+     4,08:1. Um veu escuro atras dela devolve o contraste AA sem mexer no holofote do kit. */
+  .res .aspas{grid-column:1 / -1;grid-row:3;background:rgba(38,33,28,.42);border-radius:clamp(28px,3.6vw,46px)}
+  .res__cta{grid-column:1 / -1;grid-row:4;justify-self:start}
 }
 @media (min-width:600px){   /* duas colunas cedo: empilhado, a figura deixava um vazio grande à esquerda no tablet */
   .res__sub{max-width:none}
